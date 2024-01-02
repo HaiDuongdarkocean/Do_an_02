@@ -1,0 +1,675 @@
+<html style="height: auto; min-height: 100%;"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quản lí khách hàng</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+     <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="all"
+    rel="stylesheet" />
+        <style>
+            table tr:not(:first-child){
+                cursor: pointer;transition: all .25s ease-in-out;
+            }
+            table tr:not(:first-child):hover{background-color: #ddd;}
+            #shoppingCart{
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: absolute;
+            /*z-index: 99;*/
+          }
+          #cartItemsContainer {
+            position: relative;
+            width: 600px;
+            left: 50%;
+            top: 150px;
+            margin-left: -300px;
+            padding: 40px;
+            box-shadow: 0 0 10px black;
+            background: #e9e9e9;
+            overflow: auto;
+          }
+          #cartItemsContainer i {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+          }
+        </style>
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="skin-blue sidebar-mini" style="height: auto; min-height: 100%;">
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../../index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>A</b>LT</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Admin</b></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                  <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-success">4</span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li class="header">Bạn có 4 tin nhắn</li>
+                        <li>
+                          <!-- inner menu: contains the actual data -->
+                          <ul class="menu">
+                            <li><!-- start message -->
+                              <a href="#">
+                                <div class="pull-left">
+                                  <img src="dist/img/dat.jpg" class="img-circle" alt="User Image">
+                                </div>
+                                <h4>
+                                  Bui Tien Dat
+                                  <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                </h4>
+                                <p>Tôi muốn mua hàng</p>
+                              </a>
+                            </li>
+                            <!-- end message -->
+                            <li>
+                              <a href="#">
+                                <div class="pull-left">
+                                  <img src="dist/img/dat.jpg" class="img-circle" alt="User Image">
+                                </div>
+                                <h4>
+                                  Duyên pibo
+                                  <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                </h4>
+                                <p>Bạn gới thiệu hoa quả cho tôi?</p>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <div class="pull-left">
+                                  <img src="dist/img/user8-128x128.jpg" class="img-circle" alt="User Image">
+                                </div>
+                                <h4>
+                                  Developers
+                                  <small><i class="fa fa-clock-o"></i> Today</small>
+                                </h4>
+                                <p>Why not buy a new awesome theme?</p>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <div class="pull-left">
+                                  <img src="dist/img/user8-128x128.jpg" class="img-circle" alt="User Image">
+                                </div>
+                                <h4>
+                                  Yến Hải
+                                  <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                </h4>
+                                <p>Tôi muốn mua hàng?</p>
+                              </a>
+                            </li>
+                            
+                          </ul>
+                        </li>
+                        <li class="footer"><a href="#">Xem tất cả</a></li>
+                      </ul>
+                    </li>
+                    <!-- Notifications: style can be found in dropdown.less -->
+                    <li class="dropdown notifications-menu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning">10</span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li class="header">Bạn có 10 thông báo</li>
+                        <li>
+                          <!-- inner menu: contains the actual data -->
+                          <ul class="menu">
+                            <li>
+                              <a href="#">
+                                <i class="fa fa-users text-aqua"></i> 5 thông báo mới của ngày hôm nayy
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <i class="fa fa-warning text-yellow"></i> Đơn hàng của Bui Tien Dat
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <i class="fa fa-users text-red"></i> 5 đơn hàng cần xác nhận
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <i class="fa fa-shopping-cart text-green"></i> 25 đơn đã nhận
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <i class="fa fa-user text-red"></i> Bạn cần đăng nhập user
+                              </a>
+                            </li>
+                          </ul>
+                        </li>Xem tất cảV</a></li>
+                      </ul>
+                    </li>
+                    <!-- Tasks: style can be found in dropdown.less -->
+                    <li class="dropdown tasks-menu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-flag-o"></i>
+                        <span class="label label-danger">9</span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li class="header">Bạn có 9 lời mời kết bạn</li>
+                        <li>
+                          <!-- inner menu: contains the actual data -->
+                          
+                        </li>
+                        <li class="footer">
+                          <a href="#">Xem tất cả</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="dist/img/dat.jpg" class="user-image" alt="User Image">
+                        <span class="hidden-xs">Bui Tien Dat</span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+                          <img src="dist/img/dat.jpg" class="img-circle" alt="User Image">
+
+                          <p>
+                            Bui Tien Dat
+                            <small>04-03-2003</small>
+                          </p>
+                          <div class="pull-right">
+                            <a href="#" class="btn btn-default btn-flat">Đăng xuất</a>
+                          </div>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="user-body">
+                         
+                          <!-- /.row -->
+                        </li>
+                        <!-- Menu Footer-->
+                        
+                      </ul>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                    
+                  </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="height: auto;">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/dat.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Bui Tien Dat</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu tree" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview menu-open">
+          <a id="Trangchu" style="cursor: pointer;">
+            <i class="fa fa-dashboard"></i> Trang chủ
+          </a>
+        </li>
+        <script>
+            $(document).ready(function() {
+                $('#Trangchu').click(function(event) {
+                    /* Act on the event */
+                    window.location = "index.html";
+                });
+            });
+        </script>
+       <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Quản lý loại sản phẩm</span>
+
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="dsloaisp.html"><i class="fa fa-circle-o"></i>DS Loại sản phẩm</a></li>
+            <li><a href="themLSP.html"><i class="fa fa-circle-o"></i>Thêm mới Loại sản phẩm</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Quản lý sản phẩm</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="DsSanPham.html"><i class="fa fa-circle-o"></i>Danh sách Sản phẩm</a></li>
+            <li><a href="ThemSP.html"><i class="fa fa-circle-o"></i>Thêm sản phẩm mới</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Quản lý khách hàng</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="dskhachhang.html"><i class="fa fa-circle-o"></i>Danh sách khách hàng</a></li>
+            <li><a href="themKH.html"><i class="fa fa-circle-o"></i>Thêm khách hàng</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Quản lý nhà cung cấp</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="dsNCC.html"><i class="fa fa-circle-o"></i>Danh sách nhà cung cấp</a></li>
+            <li><a href="themNCC.html"><i class="fa fa-circle-o"></i>Thêm nhà cung cấp</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Quản lý nhân viên</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="dsNV.html"><i class="fa fa-circle-o"></i>Danh sách nhân viên</a></li>
+            <li><a href="themNV.html"><i class="fa fa-circle-o"></i>Thêm nhân viên</a></li>
+            
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Quản lý đơn hàng</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="hdn.html"><i class="fa fa-circle-o"></i>Đơn hàng nhập</a></li>
+            <li><a href="hdx.html"><i class="fa fa-circle-o"></i>Đơn hàng bán</a></li>
+          </ul>
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Thống kê báo cáo</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="doanhthuThang.html"><i class="fa fa-circle-o"></i>Doanh thu trong tháng</a></li>
+            <li><a href="hangbanchay.html"><i class="fa fa-circle-o"></i>Hàng bán chạy</a></li>
+             <li><a href="hangtonkho.html"><i class="fa fa-circle-o"></i>Hàng tồn kho</a></li>
+          </ul>
+        </li>
+       
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 1735px;">
+            <!-- Content Header (Page header) -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+
+
+
+
+                          <!--  Sửa -->
+
+                        <div id="shoppingCart">
+                          <div id="cartItemsContainer">
+                            <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true"></i>
+                            Tên khách hàng: <input type="text" name="fname" id="fname" /><br/><br/>
+                            Mã khách hàng: <input type="text" name="lname" id="lname" /><br/><br/>
+                            Số điện thoại: <input type="text" name="age" id="age" /><br/><br/>
+                            Địa chỉ: <input type="text" name="age" id="slg" /><br/><br/>
+                            <button onclick="editRow();">Edit Row</button><br><br>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                      <h2>Khách hàng</h2><p></p><br>
+                     <input type="text" id="dmspNK_tkiem" onkeyup="myFunctionTimKiem()" placeholder=" Tìm kiếm tên hoa quả.." title="Type in a name" style="width: 600px; height: 40px; padding-left: 50px"><br><p></p>
+                     <script>
+          function myFunctionTimKiem() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("dmspNK_tkiem");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }       
+            }
+          }
+        </script>
+        <table id="table" border="1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+             
+            <tr>
+                <th>Tên khách hàng</th>
+                <th>Mã khách hàng</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Sửa thông tin</th>
+                <th>Xóa khách hàng</th>
+
+            </tr>
+            
+            <tr>
+                <td>Bui Tien Dat</td>
+                <td>kh001</td>
+                <td>0961394881</td>
+                <td>Khoái Châu</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            
+            
+            <tr>
+                <td>Duyên Pibo</td>
+                <td>kh2</td>
+                <td>0336721397</td>
+                <td>Khoái Châu</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+
+
+            </tr>
+            
+            <tr>
+                <td>Mẹ Dung</td>
+                <td>kh3</td>
+                <td>0338061624</td>
+                <td>Liên Khê</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            
+            <tr>
+                <td>Bố Minh</td>
+                <td>kh4</td>
+                <td>0378178597</td>
+                <td>Cẩm Khê</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            
+            <tr>
+                <td>Em Thắng</td>
+                <td>kh5</td>
+                <td>012598712</td>
+                <td>Kênh thượng</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            <tr>
+                <td>Bác Tâm</td>
+                <td>kh6</td>
+                <td>0337145965</td>
+                <td>Cẩm Khê</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            <tr>
+                <td>Ông Ngoại</td>
+                <td>kh7</td>
+                <td>0339458987</td>
+                <td>Kênh Hạ</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            <tr>
+                <td>Ông Nội</td>
+                <td>Ckh8</td>
+                <td>0987456258</td>
+                <td>Liên Khê</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            <tr>
+                <td>Bà Nội</td>
+                <td>kh9</td>
+                <td>012589458</td>
+                <td>Liên Khê</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            <tr>
+                <td>Bà Ngoại</td>
+                <td>kh10</td>
+                <td>0147569852</td>
+                <td>Kênh Hạ</td>
+                <td><button class="openCloseCart">Sửa</button></td>
+                  <td><input type="button" name="" value="Xóa" onclick="xoa(this)"></td>
+            </tr>
+            
+        </table>
+         
+
+
+       <!--  Xóa sản phẩm -->
+        <script type="text/javascript" language="javascript">
+                function xoa(cr7)
+                {
+                    var i=confirm("Bạn chắc muốn xóa không?");
+                    if(i==true){
+                        var i = cr7.parentNode.parentNode.rowIndex;
+                        document.getElementById("table").deleteRow(i);
+                    }
+                }
+            </script>
+
+
+             <!--   end Xóa sản phẩm -->
+
+
+            <!-- Sửa sản phẩm -->
+         <script>
+          
+            $('.openCloseCart').click(function () {
+              $('#shoppingCart').toggle();
+            });
+        </script>
+        <script> 
+            
+            // get selected row
+            // display selected row data in text input
+            
+            var table = document.getElementById("table"),rIndex;
+            
+            for(var i = 1; i < table.rows.length; i++)
+            {
+                table.rows[i].onclick = function()
+                {
+                    rIndex = this.rowIndex;
+                    console.log(rIndex);
+                    
+                    document.getElementById("fname").value = this.cells[0].innerHTML;
+                    document.getElementById("lname").value = this.cells[1].innerHTML;
+                    document.getElementById("age").value = this.cells[2].innerHTML;
+                    document.getElementById("slg").value = this.cells[3].innerHTML;
+                };
+            }
+            
+            
+           // edit the row
+            function editRow()
+            {
+                table.rows[rIndex].cells[0].innerHTML = document.getElementById("fname").value;
+                table.rows[rIndex].cells[1].innerHTML = document.getElementById("lname").value;
+                table.rows[rIndex].cells[2].innerHTML = document.getElementById("age").value;
+                table.rows[rIndex].cells[3].innerHTML = document.getElementById("slg").value;
+            }
+            
+        </script>    
+        <!--end Sửa sản phẩm -->
+
+
+
+
+
+
+
+                              
+
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.4.0
+            </div>
+            <strong>Copyright © 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+            reserved.
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li class="active"><a href="#control-sidebar-theme-demo-options-tab" data-toggle="tab"><i class="fa fa-wrench"></i></a></li>
+                <li class="active"><a href="#control-sidebar-theme-demo-options-tab" data-toggle="tab"><i class="fa fa-wrench"></i></a></li><li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 3 -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <!-- page script -->
+    <script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+    </script>
+
+
+
+</body></html>

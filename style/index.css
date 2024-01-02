@@ -1,0 +1,1798 @@
+input[type="text"]:focus {
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#website {
+  width: auto;
+  height: auto;
+}
+
+.dautrang {
+  margin: auto;
+  width: 1200px;
+}
+
+#topdau {
+  width: auto;
+  height: 50px;
+  background-color: #00a65a;
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  z-index: 99
+}
+
+.od1 {
+  width: 400px;
+  height: 50px;
+  float: left;
+}
+
+.tieude {
+  text-align: center;
+  padding: 15px;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.od2 {
+  width: 500px;
+  height: 50px;
+  float: right;
+  border: none;
+}
+
+
+
+/* day la phan dang nhap*/
+/* Full-width input fields */
+.inpputDNtext[type=text],
+.inpputDNpasword[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.buttonDangNhap,
+.buttonlogin {
+  background-color: #00a65a;
+  color: black;
+  padding: 14px 14px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 200px;
+  border-right: 1px solid black;
+}
+
+.buttonDangNhap:hover,
+.buttonDangKi:hover {
+  opacity: 0.6;
+  color: #ffffffd1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatarDangNhap {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* ket thuc phan dang nhap*/
+
+/* dang ki */
+.buttonDangKi {
+  background-color: #00a65a;
+  color: black;
+  padding: 14px 23px;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 200px;
+  float: left;
+  margin-top: -47px;
+  margin-left: 285px;
+}
+
+/*day la phan dau trang-header*/
+
+#top {
+  width: auto;
+  height: 50px;
+}
+
+#header {
+  width: auto;
+  margin: auto;
+  height: 180px;
+}
+
+/*phan tim kiem*/
+#header .headerTKiem {
+  float: left;
+  width: 400px;
+  height: 60px;
+  margin: 70px 0 0 30px;
+
+}
+
+#header .headerTKiem #seach-box {
+  position: relative;
+  height: 40px;
+  width: 450px;
+  float: left;
+  padding-top: 47px;
+  /*
+   padding-left: 55px;*/
+}
+
+.inputTkiem {
+  height: 43px;
+  width: 400px;
+  box-sizing: border-box;
+  border: none;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 17px 30px 17px 20px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+#header .headerTKiem #seach-box i {
+  color: #00a65a;
+  font-size: 23px;
+  position: absolute;
+  margin: -34px 0 0 367px;
+}
+
+/* 
+.inputTkiem:focus {
+  width: 100%;
+}*/
+
+#header .headerTKiem #seach-box .inputTkiem i:focus {
+  padding-left: 300px;
+  margin: -34px 0 0 300px;
+}
+
+/*het phan tim kiem*/
+
+/* phan logo*/
+#header .headerLogo {
+  float: left;
+  text-align: center;
+  margin-top: 58px;
+  width: 400px;
+  height: 70px;
+
+}
+
+#header .headerLogo .logojuji {}
+
+
+
+/*Đây là phần hotline*/
+.hotlinea {
+  color: #515151;
+  margin: -45px -18px 18px -150px;
+  margin-top: 50px;
+  padding-top: 8px;
+  position: absolute;
+  font-size: 20px;
+}
+
+.hotlinea:hover {
+  color: red;
+  text-decoration: none;
+}
+
+/* phan gio hang*/
+#giohang {
+  margin-left: 165px;
+  position: relative;
+  margin-top: 41px;
+}
+
+#p-cart {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  ;
+  color: red;
+  text-align: center;
+  margin: -10px 0 0 -501px;
+  font-size: 16px;
+}
+
+.sosp {
+  background-color: #ff5722;
+  color: white;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: -59px 0 0 195px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+}
+
+
+
+
+/* phan header*/
+
+
+/* phan MENU*/
+.menudau {
+  text-align: center;
+  background-color: #e6e6e6;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #f2f2f2;
+  width: 594px;
+  margin-left: 303px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: #404040;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #404040;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0px;
+  float: left;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+/* đây là phần menu sarn phẩm*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #404040;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #00a65a;
+  text-decoration: none;
+  border-radius: 30px;
+  color: white;
+}
+
+
+.dropdown-content .MegaMenu .row .column h3 a {
+  color: #262626;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2c2c2c;
+  width: 800;
+  left: 150px;
+  right: 150px;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content .MegaMenu {
+  background-image: url("../Media/img/nmn1.jpg");
+  padding: 0px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* TÃ¡ÂºÂ¡o ba cÃ¡Â»â„ ¢tbÃ¡ÂºÂ±ng nhau nÃ¡Â»â€¢i bÃƒÂªn cÃ¡ÂºÂ¡nh nhau */
+.column {
+
+  margin-left: 10px;
+  float: left;
+  width: 24%;
+  padding: 50px;
+  /*
+  background-image: url(../Media/img/nmn4.jpg);*/
+  background-color: #e6e6e6;
+  height: 350px;
+  border: 1px solid #00a65a;
+
+}
+
+
+.column a {
+  float: none;
+  color: #262626;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.row .column a:hover {
+  background-color: #6c3;
+  text-decoration: none;
+}
+
+/* XÃƒÂ³a phao sau cÃƒÂ¡c cÃ¡Â»â„¢t */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* BÃ¡Â»â€˜ cÃ¡Â»Â¥c Ã„â€˜ÃƒÂ¡p Ã¡Â»Â©ng - lÃƒÂ m cho ba cÃ¡Â»â„¢t xÃ¡ÂºÂ¿p chÃ¡Â»â€œng lÃƒÂªn nhau thay vÃƒÂ¬ cÃ¡ÂºÂ¡nh nhau */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 900px;
+    height: auto;
+  }
+}
+
+
+
+
+/*ket thuc phan MENU*/
+
+
+
+
+.banner {
+  width: 1200px;
+  height: 800px;
+  text-align: center;
+}
+
+.anhslide {
+  width: 1200px;
+  height: auto;
+  text-align: center;
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+}
+
+.nivoSlider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.cachdong {
+  height: 50px;
+  background-color: red;
+}
+
+#top {
+  margin: 0px auto 0;
+  position: relative;
+  z-index: 1000;
+  margin-top: -50px;
+  background: #f5f5f5;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#top ul li {
+  float: left;
+  width: 33.333%;
+  display: block;
+}
+
+#top div a {
+  display: block;
+  overflow: hidden;
+}
+
+#top img {
+  width: 100%;
+}
+
+#top div a img {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+#top img {
+  width: 100%;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none
+}
+
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px
+}
+
+figure {
+  margin: 0
+}
+
+img {
+  vertical-align: middle
+}
+
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+  display: block;
+  max-width: 100%;
+  height: auto
+}
+
+.trangdauthan {
+  margin: auto;
+  width: 1200px;
+  height: 100px;
+  background-color: red;
+
+}
+
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0
+}
+
+.mySlides {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-left: -50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
+
+.tranggiua {
+  margin: auto;
+  width: 1200px;
+}
+
+
+
+
+/* đây là phần ship-liên hệ*/
+.ship-support {
+  height: 100px;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.ship-support .bakhoi .motkhoi i {
+  color: #00a65a;
+}
+
+.bakhoi {
+  width: 1200px;
+  margin: auto;
+  height: 170px;
+}
+
+.bakhoi .motkhoi {
+  width: 33%;
+  height: 100%;
+  float: left;
+}
+
+.bakhoi .ship-lhe-goi-li {}
+
+.bakhoi .motkhoi a {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding-top: 36px;
+  color: black;
+}
+
+.bakhoi .motkhoi a.trontron {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #00a65a;
+  float: left;
+  font-size: 40px;
+  padding-top: 0;
+  border-radius: 50%;
+  z-index: 9;
+  margin-right: 25px;
+  position: relative;
+}
+
+.bakhoi .motkhoi a.trontron:before {
+  position: absolute;
+  content: '';
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #00a65a;
+  z-index: 1;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.bakhoi .motkhoi a.trontron:hover:before {
+  transform: scale(0.7);
+  opacity: 1;
+}
+
+.bakhoi .motkhoi p {
+  color: gray;
+}
+
+.hoa {
+  text-align: center;
+  margin-left: 416px;
+  margin-top: -17px;
+}
+
+
+
+
+
+/* day la big sale*/
+.bigsale {
+  /*
+  background-color: red;*/
+  height: 500px;
+  width: auto;
+  margin: 2% 57px 0 4%;
+}
+
+.bigsale-trai {
+  width: 33.33%;
+  /*
+    background-color: pink;*/
+  height: 500px;
+  float: left;
+  position: relative;
+
+}
+
+.bigsale-trai-p {
+  position: absolute;
+  margin: -404px -28px 50px 56px;
+  color: white;
+  font-family: cursive;
+  font-size: 37px;
+}
+
+.bigsale-btn {
+  background-color: transparent;
+  width: 130px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid white;
+  color: white;
+  font-size: 15px;
+  padding: 10px 0 0 21px;
+  margin: -60px 0 0 46px;
+}
+
+.bigsale-btn:hover {
+  background-color: #00a65a;
+}
+
+.bigsale_a:hover {
+  text-decoration: none;
+}
+
+.bigsale-giua {
+  width: 33.33%;
+  /*
+    background-color: blue;*/
+  height: 500px;
+  float: left;
+}
+
+.bigsale-giua-tren {
+  width: 100%;
+  height: 272px;
+  /*
+  background-color: red;*/
+  position: relative;
+
+}
+
+.bigsale-giua-duoi {
+  width: 100%;
+  height: 228px;
+  /*
+  background-color: yellow;*/
+  position: relative;
+
+}
+
+.bigsale-giua-p {
+  position: absolute;
+  margin: -198px 0 0 79px;
+  color: white;
+  font-family: cursive;
+  font-size: 33px;
+}
+
+
+.bigsale-phai {
+  width: 33.33%;
+  /*
+    background-color: black;*/
+  height: 500px;
+  float: right;
+  position: relative;
+}
+
+.bigsale-phai-p {
+  position: absolute;
+  margin: 107px 0 0 70px;
+  color: white;
+  font-family: cursive;
+  font-size: 36px;
+}
+
+.bigsale img:hover {
+
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+
+/* đây là sản phẩm bán chạy lần2 */
+.Sanphambanchaybao {
+  width: 1200px;
+  margin: auto;
+  height: 600px;
+  background-color: pink;
+}
+
+
+
+
+
+#Noidia {
+  background-color: white;
+}
+
+#Nhapkhau {
+  background-color: white;
+}
+
+#dinhduong {
+  background-color: white;
+}
+
+#raucuquakhac {
+  background-color: white;
+}
+
+/* Đặt chiều cao của thân máy và tài liệu thành  */
+
+.spbcto {
+  height: 600px;
+  margin: auto;
+  font-family: Arial;
+  background-color: red;
+
+  width: 1200px;
+
+}
+
+/* Liên kết tab kiểu */
+.menuspbc {
+  background-color: white;
+  color: #555;
+  float: left;
+  border: 1px solid #555;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+  border-radius: 50px;
+}
+
+.menuspbc:hover {
+  color: #ff471a;
+}
+
+
+/* Định kiểu nội dung tab (và thêm chiều cao: 100% cho nội dung toàn trang) */
+.hinhAnhspbc {
+  color: white;
+  display: none;
+  padding: 73px 0 0 0;
+  height: 600px;
+  width: auto;
+}
+
+.spbcnk1 {
+  width: 23%;
+  /* background-color: pink;*/
+  float: left;
+  height: 465px;
+  margin-left: 20px;
+  display: inline-table;
+
+}
+
+.spbcnk1:hover {
+  border: 1px solid black;
+  /* box-shadow: 5px 5px 5px 5px red;*/
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.5s;
+  border: 1px solid #e5e5e5;
+  transform: scale(1.02);
+  transition: 0.1s;
+}
+
+
+
+.spbcnk1_tren {
+  width: 250px;
+  height: 250px;
+  /*background-color: red;*/
+  text-align: center;
+  margin: 13px 13px 0 13px;
+}
+
+#Noidia {
+  /*margin-left: 10px;*/
+}
+
+
+
+
+.spbcanhhover {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  /*border: 1px solid #f1f1f1;*/
+  perspective: 1000px;
+}
+
+.spbcanhhover-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.spbcanhhover:hover .spbcanhhover-inner {
+  transform: rotateY(180deg);
+}
+
+.spbcanhhover-tren,
+.spbcanhhover-duoi {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.spbcanhhover-tren {
+  background-color: #bbb;
+  color: black;
+}
+
+.spbcanhhover-duoi {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.spbcnk1_duoi a {
+  text-decoration: none;
+  color: #333;
+
+}
+
+.spbcnk1_ten {
+  text-align: center;
+  font-size: 22px;
+
+}
+
+.spbcnk1_ten a:hover {
+  color: #00a65a;
+  text-decoration: none;
+}
+
+.spbcnk1_xx {
+  color: #333;
+  text-align: center;
+  margin-top: -15px;
+}
+
+.spbcnk1_gia {
+  color: #00a65a;
+  text-align: center;
+  font-size: 18px;
+}
+
+.spbcnk1_btnMua {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #00a65a;
+  color: white;
+  text-align: center;
+  margin-left: 67px;
+  border-radius: 50px;
+
+}
+
+.spbcnk1_btnMua:hover {
+  text-decoration: none;
+  background-color: yellow;
+  color: white;
+}
+
+/* Kết thúc là sản phẩm bán chạy */
+
+
+
+
+
+
+/* Đây là phần sản phẩm nổi bật*/
+.spnoibat {
+  width: 1200px;
+  height: 1200px;
+  margin: auto;
+  background-color: pink;
+  position: relative;
+}
+
+.spnoibat_nhapkhau {
+  width: 1200px;
+  height: 400px;
+  margin: auto;
+  background-color: red;
+}
+
+/* đây là hover ảnh đường kẻ*/
+#bnerDuobannerNhapkhau_spnb {
+  position: relative;
+
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: white;
+}
+
+#bnerDuobannerNhapkhau_spnb:hover a img {
+  transform: scale(1.15);
+  transition: 1.5s;
+}
+
+#bnerDuobannerNhapkhau_spnb a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index:1;*/
+  width: 100%;
+  height: 400px;
+}
+
+#bnerDuobannerNhapkhau_spnb:before {
+  /*duong thang trai*/
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 2px;
+  height: 380px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: 1;
+}
+
+#bnerDuobannerNhapkhau_spnb #bnerDuoi_spnb_spnb:before {
+  /*duong thang phai*/
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 1170px;
+  width: 2px;
+  height: 380px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: 1;
+}
+
+#bnerDuobannerNhapkhau_spnb #bnerAnh_spnb:before {
+  /*duong thang tren*/
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 1.2%;
+  width: 97.5%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: 1;
+}
+
+#bnerDuobannerNhapkhau_spnb #bnerDuoi:before {
+  /*duong thang duoi*/
+  content: '';
+  position: absolute;
+  top: 380px;
+  left: 1.2%;
+  width: 97.5%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: 1;
+}
+
+#bnerDuobannerNhapkhau_spnb:hover:before,
+#bnerDuobannerNhapkhau_spnb:hover #bnerDuoi_spnb_spnb:before,
+#bnerDuobannerNhapkhau_spnb:hover #bnerAnh_spnb:before,
+#bnerDuobannerNhapkhau_spnb:hover #bnerDuoi:before {
+  transform: scale(1);
+}
+
+.bn_p1_spnb {
+  color: #00a65a;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 115px;
+  padding-left: 70px;
+}
+
+.bn_p2_spnb {
+  color: #00a65a;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 450px;
+  padding-left: 70px;
+}
+
+/* kết thúc hover đường kẻ*/
+
+
+
+
+
+.spnoibat_rauqua {
+  width: 1200px;
+  height: 400px;
+  margin: auto;
+  background-color: blue;
+}
+
+.spnb {
+  width: 1200px;
+  height: 400px;
+  margin: auto;
+  /*background-color: pink;*/
+
+}
+
+.spnb1 {
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  /*background-image: url(../Media/img/cr3.jpg);*/
+  position: absolute;
+  margin: -900px 0 0 100px;
+  background-color: white;
+  z-index: 3;
+}
+
+.spnb1 .spnbTrai {
+  width: 33%;
+  height: 100%;
+  float: left;
+  /* background-color: red;*/
+}
+
+.spnb1 .spnbGiua {
+  width: 33%;
+  height: 100%;
+  float: left;
+  /* background-color: blue;*/
+  position: relative;
+}
+
+
+.spnb1 .spnbPhai {
+  width: 33%;
+  height: 100%;
+  float: right;
+  /*background-color: yellow;
+*/
+}
+
+.spnb1 .spnbPhai img {
+  float: right;
+}
+
+.spnb1 .spnbGiua .spnbGiua_p {
+  line-height: 14px;
+  float: left;
+}
+
+.spnb_p_tieude {
+  color: red;
+  position: absolute;
+  margin: -118px 0 0 32px;
+  font-size: 32px;
+  font-family: cursive;
+  font-weight: 900;
+}
+
+.spnbgiuaanh2 {
+  margin-top: 38px;
+}
+
+/* Kết thúc là phần sản phẩm nổi bật*/
+
+
+
+
+
+
+/* đây là phần blog*/
+.theblog .bogkhung a:hover {
+  text-decoration: none;
+}
+
+.theblog .bogkhung .blog_tieude:hover {
+  color: #00a65a;
+}
+
+.bogkhung {
+  width: 1200px;
+  margin: auto;
+  height: 750px;
+  background-color: white;
+
+}
+
+.bogkhung-trai {
+  width: 600px;
+  height: 650px;
+  float: left;
+  background-color: white;
+
+}
+
+.bogkhung-phai {
+  width: 600px;
+  height: 650px;
+  float: right;
+  background-color: white;
+}
+
+.bogkhung-anh {
+  width: 578px;
+  height: 380px;
+
+}
+
+.docthemblog {
+  line-height: 50px;
+  background-color: #00a65a;
+  border: 1px solid yellow;
+  width: 142px;
+  height: 50px;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+}
+
+.docthemblog:hover {
+  background-color: #ffcc00;
+  border: 1px solid #00a65a;
+}
+
+.docthemblog-xemall {
+  line-height: 50px;
+  background-color: #00a65a;
+
+  width: 142px;
+  height: 50px;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+
+}
+
+.docthemblog-xemall:hover {
+  background-color: #00a65a;
+  color: white;
+
+
+}
+
+.blog-btn-all {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  float: left;
+}
+
+.blog-btn-all_p {
+  border-radius: 50px;
+  line-height: 50px;
+  width: 150px;
+  height: 50px;
+  background-color: #00a65a;
+  border: 1px solid yellow;
+  color: white;
+  text-align: center;
+  margin: 0px 0 0 524px;
+}
+
+.blog-btn-all .blog-btn-all_p:hover {
+  background-color: #ffcc00;
+  border: 1px solid #00a65a;
+}
+
+#ykienkhachhang {
+  width: auto;
+  height: 670px;
+}
+
+
+/*đây là cuối trang*/
+.cuoitrang {
+  width: auto;
+  height: 600px;
+  background-color: burlywood;
+}
+
+.futter {
+  position: absolute;
+  z-index: 2;
+  margin-top: -16px;
+}
+
+.chan1 {
+  width: auto;
+  height: 150px;
+  background-color: #269300;
+  position: relative;
+  z-index: 1;
+}
+
+.chan1-newlette {
+  width: 400px;
+  height: 150px;
+
+  float: left;
+}
+
+.chan1 .chan1-newlette p {
+
+  font-size: 35px;
+  size: 72px;
+  color: white;
+  padding: 13px 0 0 151px;
+}
+
+.chan1-giua {
+  float: left;
+
+  width: 295px;
+  height: 150px;
+}
+
+.chan1 .chan1-giua p {
+  color: white;
+  padding: 35px 7px 13px 14px;
+  font-size: 17px;
+}
+
+.chan1-email {
+  float: right;
+
+  width: 550px;
+  height: 150px;
+}
+
+.chan1 .chan1-email input[type=text] {
+  font-size: 20px;
+  border-radius: 50px;
+  size: 30px;
+  height: 37px;
+  width: 360px;
+  padding: 20px;
+  margin: 48px 0 0 -50px;
+  border: 2px solid white;
+
+}
+
+.chan1 .chan1-email button {
+  font-size: 23px;
+  height: 44px;
+  width: 122px;
+  border-radius: 50px;
+  border: 2px solid white;
+  background-color: #00a65a;
+  color: white;
+}
+
+.chan2 {
+  width: auto;
+  height: 450px;
+  background-color: #2c2c2c !important;
+}
+
+
+.chan2-1 {
+  background-color: #2c2c2c;
+  width: auto;
+  height: 380px;
+
+}
+
+.chan2-1-1 {
+  width: 1200px;
+  height: 380px;
+  margin: auto;
+  background-color: #2c2c2c !important;
+  ;
+}
+
+.chan2-1-1-tren {
+  height: 380px;
+
+
+}
+
+.chan2-about {
+  width: 348px;
+  height: 330px;
+  float: left;
+}
+
+.chan2-about-p {
+  color: #999;
+  margin-left: 10px;
+}
+
+#chan2-thongtin {
+  width: 300px;
+  height: 330px;
+  float: left;
+  margin-left: 63px;
+}
+
+#chan2-thongtin ul {
+  list-style: none;
+  font-size: 18px;
+}
+
+
+#chan2-vechungtoi {
+  width: 400px;
+  height: 330px;
+  float: right;
+}
+
+.chan2-1 .chan2-1-1 .chan2-1-1-tren #chan2-vechungtoi i {
+  color: #00a65a;
+}
+
+
+
+
+#chan2-thongtin ul li::before {
+  content: "\2022";
+  color: #00a65a;
+  font-weight: bold;
+  display: inline-block;
+  padding: 7px;
+}
+
+#chan2-thongtin ul li a {
+  color: #999;
+
+}
+
+#chan2-thongtin ul li a:hover {
+  color: #00a65a;
+  text-decoration: none;
+}
+
+
+.chan2-2 {
+  background-color: black;
+  width: auto;
+  height: 70px;
+}
+
+.chan2-2-trai {
+  height: 70px;
+  width: 550px;
+  float: left;
+}
+
+.chan2 .byYen .chan2-2-trai p {
+  color: #999;
+  padding-left: 14%;
+  padding-top: 10px;
+}
+
+.yen {
+
+  text-decoration: none;
+  color: #00a65a;
+}
+
+.yen:hover {
+  text-decoration: none;
+}
+
+.chan2-2-phai {
+  height: 70px;
+  width: 750px;
+  float: right;
+}
+
+.chan2 .chan2-2 .chan2-2-phai p {
+  color: white;
+  font-size: 20px;
+  float: right;
+  margin-right: 90px;
+}
+
+
+
+#chan2-icon {}
+
+#chan2-icon ul {
+  list-style: none;
+}
+
+#chan2-icon .chan2-ul .chan2-li {
+  position: fixed;
+  right: -200px;
+  margin-top: 5px;
+  border: 1px solid #2c2c2c;
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  z-index: 100000000;
+}
+
+#chan2-icon .chan2-ul .chan2-li:nth-child(1) {
+  top: 60%;
+  background-color: #fff;
+}
+
+#chan2-icon .chan2-ul .chan2-li:nth-child(2) {
+  top: 66%;
+  background-color: #fff;
+}
+
+#chan2-icon .chan2-ul .chan2-li:nth-child(3) {
+  top: 72%;
+  background-color: #fff;
+}
+
+#chan2-icon .chan2-ul .chan2-li:nth-child(4) {
+  top: 78%;
+  background-color: #fff;
+}
+
+#chan2-icon .chan2-ul .chan2-li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+#chan2-icon .chan2-ul .chan2-li:hover {
+  right: -100px;
+}
+
+#chan2-icon .chan2-ul .chan2-li i {
+  margin-right: 10px;
+
+}
+
+.btn-hover:hover {
+  opacity: 0.5;
+  color: #00a65a;
+}

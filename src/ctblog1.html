@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chi tiết Blog1</title>
+	<link rel="stylesheet" type="text/css" href="../style/index.css">
+	<link rel="stylesheet" type="text/css" href="../style/ctietblog1.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery-3.2.1.min.js" type="text/javascript" ></script>
+	<script src="java.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="shortcut icon" type="image/png" href="../Media/img/dat.jpg"/>
+</head>
+<body>
+	<div class="blogfull">
+		<!-- đây là phần top-->
+		<div id="topdau">
+			<div class="od1">
+				<div class="tieude" align="center">
+					<div id="myNav" class="overlay">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<div class="overlay-content">
+							<a href="../src/index.html">Trang chủ</a>
+							<a href="../src/Nhapkhau.html">Sản phẩm</a>
+							<a href="../src/aboutUs.html">Giới thiệu</a>
+							
+							<a href="../src/blog.html">Blog</a>
+							<a href="../src/Lienhe.html">Liên hệ</a>
+						</div>
+					</div>
+
+
+					<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; Welcome to Fuji Online Shopping Store !</span>
+
+					<script>
+						function openNav() {
+							document.getElementById("myNav").style.width = "100%";
+						}
+
+						function closeNav() {
+							document.getElementById("myNav").style.width = "0%";
+						}
+					</script>
+				</div>
+			</div>
+			<div class="od2"> 
+				<div class="dangnhap">
+					<button class="buttonDangNhap" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập
+					</button>
+
+					<div id="id01" class="modal">
+
+						<form class="modal-content animate" action="/src/index.html">
+							<div class="imgcontainer">
+								<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;
+								</span>
+								<img src="../Media/img/dat.jpg" alt="Avatar" class="avatarDangNhap">
+							</div>
+
+							<div class="container">
+								<label for="uname"><b>Username</b></label>
+								<input class="inpputDNtext" type="text" placeholder="Enter Username" name="uname" required>
+
+								<label for="psw"><b>Password</b></label>
+								<input class="inpputDNpasword" type="password" placeholder="Enter Password" name="psw" required>
+
+								<button type="submit" class="buttonlogin">Login</button>
+								<label>
+									<input type="checkbox" checked="checked" name="remember"> Remember me
+								</label>
+							</div>
+
+							<div class="container" style="background-color:#f1f1f1">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#">password?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<script>
+                      // Get the modal
+                      var modal = document.getElementById('id01');
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                            	if (event.target == modal) {
+                            		modal.style.display = "none";
+                            	}
+                            }
+                        </script>
+                    </div>
+                    <div class="dangki">
+                    	<a href="../src/dangki.html">
+                    		<button class="buttonDangKi" style="width:auto;">Đăng Kí
+                    		</button></a>
+
+                    	</div>
+
+
+                    </div>
+                </div>
+
+		<!-- đây là phầm header tìm kiếm, giỏ hàng -->
+		<div class="dautrang">
+			<div id="header">
+				<div class="headerTKiem" >
+					<div id="seach-box">
+						<form>
+							<input class="inputTkiem" type="text" name="search" placeholder="Tìm kiếm hoa quả..">
+						</form>
+						<i class="fa fa-search" aria-hidden="true" ></i>
+					</div>
+				</div>
+				<div class="headerLogo">
+					
+					<a href="../src/index.html"><img src="../Media/img/logofuji.png" class="logojuji" style="border-radius: 50%;border: 3px solid #ff9600;width: 120px; margin-top: 10px" ></a>
+				</div>
+				<div style="float: right; width: 250px; height: 60px; margin: 65px 0 0 35px; ">
+					<a href="Lienhe.html" class="hotlinea"><i class="fa fa-phone" aria-hidden="true"></i>
+						Hotline:0961394881
+					</a>
+					<a href="../src/giohang.html">
+						<div id="giohang">
+
+							<img src="../Media/img/cart.png">
+
+						</div>
+						<p class="sosp">
+							9
+						</p>
+					</a>
+				</div>
+			</div>
+
+			<!-- đây là phần div menu -->
+			<br>
+			<div class="menudau">
+				<div class="navbar">
+					<a href="../src/index.html"><i class="fa fa-home" aria-hidden="true" style="color: red" ></i><b>    Trang chủ</b></a>
+
+					<div class="dropdown">
+						<button class="dropbtn"><b>Sản phẩm</b> 
+							<i class="fa fa-caret-down" style="color: red" ></i>
+						</button>
+						<div class="dropdown-content" align="center">
+							<div class="MegaMenu">
+
+								<div class="row">
+									<div class="column">
+										<h3><a href="">Trái cây nhập khẩu</a></h3>
+										<a href="#" >Nho xanh Úc</a>
+										<a href="#">Kiwi NL</a>
+										<a href="#">Lựu Isarel</a>
+										<a href="#">Lê Hàn Quốc</a>
+										
+									</div>
+									<div class="column">
+										<h3><a href="">Trái cây vùng miềm</a></h3>
+										<a href="#">Bưởi da xanh</a>
+										<a href="#">Dưa lưới</a>
+										<a href="#">Cam xoàn</a>
+										<a href="#">Xoài cát</a>
+
+									</div>
+									<div class="column">
+										<h3><a href="">Trái cây dinh dưỡng</a></h3>
+										<a href="#">Kiwi vàng NzL</a>
+										<a href="#">Táo Rockit</a>
+										<a href="#">Việt quất Peru</a>
+										<a href="#">Nho đen Úc</a>
+
+									</div>
+									<div class="column">
+										<h3><a href="">Rau củ quả tươi </a></h3>
+										<a href="#">Củ cải</a>
+										<a href="#">Ớt sapa</a>
+										<a href="#">Cà chua Mĩ</a>
+										<a href="#">Nho đen Úc</a>
+										
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> 
+
+					
+
+					<a href="../src/aboutUs.html"><b>Giới thiệu</b></a>
+					
+					
+					
+					<a href="../src/blog.html"><b>Blog </b></a>
+					<a href="../src/Lienhe.html"><b>Liên hệ</b></a>
+				</div>
+			</div>
+			</div>
+
+		<!-- đây là phần banner-->
+		<div class="bannerblogall">
+			<div id="bannerblog">
+				<div id="bannerblog_phai">
+					<div id="bannerblog_duoi">
+						<div id="bannerblog_img">
+							<img src="../Media/img/bn4.jpg" width="1200px" height="400px">
+						</div>
+					</div>
+				</div>
+				<div class="blog_p">
+					<h2><b>Blog</b></h2>
+				</div>
+			</div>
+			
+		</div><br>
+
+
+
+
+
+		<!-- đây là phần thân blog-->
+		<div id="thanblog">
+			<div class="blog_le"></div>
+			<div id="thanblog_trai">
+				<br>
+				<h2 style="color: #1a1a1a"  class="blog1_cmt">
+					<p>Ăn bưởi có thực sự giảm cân hay không ?</p>
+				</h2>
+				<p class="blog1_cmt" style="color: #999;">By: <b>Bui Tien Dat</b> tháng4, 2019</p>
+				<div class="blog1">
+					<div class="blog1_anh">
+						<img src="../Media/img/bl3.jpg"  >
+					</div>
+					<div class="blog1_cmt">
+						
+						
+						<p style="color:  #333333; font-weight: 900">Nhiều người vẫn truyền tai nhau rằng ăn bưởi thực  sự làm bạn giảm cân, thế nhưng dưới góc nhìn khoa học thì đây có phải là  liệu pháp đúng hay không...</p>
+						<p>Nhiều người vẫn truyền tai nhau rằng, ăn bưởi giúp giảm cân, lại "đánh bay" mỡ bụng cực hiệu quả.Thế  nhưng điều này có thực sự đúng và liệu rằng bưởi có thực sự là chìa  khoá nếu bạn đang cố gắng đốt cháy thật nhiều chất béo không? Theo  tiến sĩ Ken Fujioka, công tác tại bệnh viện Scripps, San Diego thì bưởi  thực sự được khoa học chứng minh là có khả năng giúp bạn giảm cân.
+
+						</p>
+						<p>
+							Điều này được lý giải như sau: Bưởi là  một trong những loại trái cây giàu chất phytochemicals - một hợp chất có  hoạt tính sinh học giúp đốt cháy chất béo, kích thích tế bào mỡ nâu đốt  cháy calo đồng thời làm giảm cảm giác thèm ăn.
+						</p>
+						<img src="../Media/img/ctbl1.jpg" align="center">
+						<p>Điều đó cho thấy, việc ăn bưởi có tác dụng rất tích cực trong việc  giảm cân. Đặc biệt, đây là phương pháp giảm cân vừa hiệu quả lại an toàn  và khá dễ dàng. Bởi hầu hết những người được hỏi trong nghiên cứu đều  cho biết ăn bưởi khá ngon, không khiến họ lười như khi uống thuốc.
+						</p>
+						<p>
+							
+							Một  nghiên cứu khác được công bố trên tạp chí khoa học Cell Metabolism cho  thấy rằng, những người ăn bưởi trong 6 tuần sẽ giảm được khoảng 2,5cm  vòng eo. 
+						</p>
+						<p>
+							Chính bởi vậy không sai khi nói rằng, bưởi thực sự là báu vật cho những ai muốn giảm cân và là khắc tinh của mỡ bụng. 
+
+							Vậy còn ngần ngại gì khi nắm trong tay bí quyết đánh tan mỡ thừa? Ghé ngay nhà Fuji thưởng thức những múi bưởi da xanh ngon tuyệt, cực giàu vitamin thôi! 
+						</p>
+					</div>
+				</div>
+				<br><br>
+
+
+			</div>
+			<div id="thanblog_phai">
+				<div id="chitiettao_trong">
+
+
+					<div class="Cam_ket">
+
+						<p class="ctsp_camket">
+
+							CAM KẾT
+
+						</p>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+							Hoa quả tươi sạch 
+
+						</p>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+							Không chất bảo quản
+						</p>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+							Dịch vụ chuyên nghiệp
+						</p>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+							Không thuốc biến đổi gen
+						</p>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+							Không hàng Trung Quốc
+						</p>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+							Giá cả cạnh tranh
+						</p>
+						<br>
+					</div>
+					<br>
+					&nbsp;&nbsp;&nbsp;<img src="../Media/img/12.jpg" alt="hihi">
+					<br><br>
+
+					<div class="Ban_chay">
+						<p class="ctsp_banchay">SẢN PHẨM BÁN CHẠY</p>
+						<div class="spbc1">
+							<div class="bc_img">
+								<img src="../Media/img/dt7.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+							</div>
+							<div class="bc_cap">
+								<h4><a href="">Dâu tây Korea</a></h4>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<p>$ 189.000 <u>đ</u></p>
+
+								<p><a href="" class="bc_cap_a">Mua ngay 
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a></p>
+							</div>
+						</div>
+						<div class="spbc1">
+							<div class="bc_img">
+								<img src="../Media/img/kw4.jpg"  alt="" style="width: 100%; height: 100%">
+							</div>
+							<div class="bc_cap">
+								<h4><a href="">Kiwi xanh Pháp</a></h4>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<p>$ 109.000 <u>đ</u></p>
+								<p><a href="" class="bc_cap_a">Mua ngay 
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a></p>
+							</div>
+						</div>
+						<div class="spbc1">
+							<div class="bc_img">
+								<img src="../Media/img/mc1.gif"  alt="" style="width: 100%; height: 100%">
+							</div>
+							<div class="bc_cap">
+								<h4><a href="">Măng cụt</a></h4>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<p>$ 99.000 <u>đ</u></p>
+								<p><a href="" class="bc_cap_a">Mua ngay 
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a></p>
+							</div>
+						</div>
+						<div class="spbc1">
+							<div class="bc_img">
+								<img src="../Media/img/cd1.jpg"  alt="" style="width: 100%; height: 100%">
+							</div>
+							<div class="bc_cap">
+								<h4><a href="">Cam đỏ Úc</a></h4>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+								<p>$ 159.000 <u>đ</u></p>
+								<p><a href="" class="bc_cap_a">Mua ngay 
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</a></p>
+							</div>
+						</div>
+
+					</div><!-- 
+					<br><br><br><br>
+					<img src="../Media/img/52.png"> -->
+					
+					
+				</div>
+			</div>
+
+			
+
+
+
+		</div>
+
+
+
+
+		<!-- đây là phần cuối trang blog-->
+				<!-- đây là cuối trang-->
+		<img src="../Media/img/fotter.PNG" alt="" class="futter">		
+		<div class="cuoitrang">
+				<div class="chan1">
+					<div class="chan1-newlette">
+						<p> <i class="fa fa-envelope" aria-hidden="true" style=" color: white"></i>&nbsp;Bản tin</p>
+					</div>
+					<div class="chan1-giua">
+						<p>Đăng ký nhận lời khuyên, tin tức và khuyến mại</p>
+					</div>
+
+					<div class="chan1-email">
+						<input type="text" placeholder="Địa chỉ email của bạn..." name="">
+						<a href="../src/index.html">&nbsp;<button type="">Đăng ký</button></a>
+					</div>
+				</div>
+				<div class="chan2">
+				
+					<div class="chan2-1">
+						<div class="chan2-1-1">
+							<div class="chan2-1-1-tren">
+								<br><br>
+								<div class="chan2-about">
+								<h3 style="color: white">&nbsp;&nbsp;VỀ CHÚNG TÔI</h3>
+								<img src="../Media/img/ab1.png" alt="">
+								<br><br>
+								<p class="chan2-about-p">&nbsp; Sản phẩm của chúng tôi được thu hoạch mới, rửa sẵn cho hộp và cuối cùng [...]</p>
+								</div>
+
+
+								<div id="chan2-thongtin">
+									<br>
+									<h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THÔNG TIN</h3>
+									<ul>
+										<li><a href=" ">Chính sách mua hàng</a></li>
+										<li><a href="">Chính sách đổi trả</a></li>
+										<li><a href="">Phương thức thanh toán</a></li>
+										<li><a href="">Đánh giá</a></li>
+										<li><a href="">Liên hệ chúng tôi</a></li>
+									</ul>
+								</div>
+								<div id="chan2-vechungtoi">
+									<h3 style="color: white">CÔNG TY CP XUẤT NHẬP KHẨU FUJIi</h3>
+									<p style="color: #999">
+										<i class="fa fa-home" aria-hidden="true"></i>&nbsp;
+										Trụ sở: Số nhà 24 D7, KĐT Đại Kim - Định Công, P.Đại Kim, Q.Hoàng Mai, TP.HN
+									</p>
+									<p style="color: #999"><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;&nbsp;Điện thoại: 0989.96.69.96 - 0988 444 123</p>
+									<p style="color: #999"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Website: www.hoaquafuji.com</p>
+									<p style="color: #999">Để đăng ký sản phẩm và yêu cầu chung xin vui lòng liên hệ với chúng tôi</p>
+									<p style="color: #999">Trân thành cảm ơn !</p>
+								</div>
+							</div>
+							
+
+						</div>
+					</div>
+					<div class="chan2-2">
+						<div class="byYen">
+							<div class="chan2-2-trai">
+								<p>© 2019 Hệ thống hoa quả sạch Fuji Fruit by: <a href="" class="yen" >Bui Tien Dat</a></p>
+							</div>
+							<div class="chan2-2-phai">
+								<p>Follow us
+									<a href="#" class="fa fa-facebook" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background: #3B5998;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+									<a href="#" class="fa fa-google" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background: #dd4b39;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+									<a href="#" class="fa fa-twitter" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background: #55ACEE;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+									<a href="#" class="fa fa-youtube" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background: #bb0000;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+									<a href="#" class="fa fa-instagram" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background:  #125688;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+
+
+		<div id="chan2-icon">
+				<ul class="chan2-ul">
+					<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-facebook-official" aria-hidden="true" style="color:#3B5998 "></i>&nbsp;&nbsp;&nbsp;Facebook</a></li>
+					<li class="chan2-li"><a href="#">&nbsp;&nbsp<i class="fa fa-phone-square" aria-hidden="true" style="color: #00a65a"></i>&nbsp;&nbsp;&nbsp;Tư vấn</a></li>
+					<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-google-plus-square" aria-hidden="true" style="color: #bb0000"></i>&nbsp;&nbsp;&nbsp;Gmail</a></li>
+
+					<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-twitter-square" aria-hidden="true" style="color: #55ACEE"></i>&nbsp;&nbsp;&nbsp;Twitter</a></li>
+				</ul>
+		</div>
+
+
+
+		
+
+
+
+	</div>
+
+	
+</body>
+</html>

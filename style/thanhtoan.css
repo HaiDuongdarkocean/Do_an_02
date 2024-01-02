@@ -1,0 +1,68 @@
+	.ndungcsthanhtoan {
+		width: 1200px;
+		margin: auto;
+		height: 1100px;
+		background-color: white;
+	}
+
+	.newthanhtoan {
+		width: 100%;
+		height: 200px;
+		background-color: white;
+	}
+
+	.newthanhtoan_trai {
+		width: 50%;
+		height: 100%;
+		background-color: white;
+		float: left;
+	}
+
+	.newthanhtoan .newthanhtoan_trai input[type=text] {
+		width: 400px;
+		height: 38px;
+		margin-left: 40px;
+
+	}
+
+	.newthanhtoan .newthanhtoan_trai input[type=email] {
+		width: 400px;
+		height: 38px;
+		margin-left: 40px;
+
+	}
+
+	.newthanhtoan_phai {
+		width: 47%;
+		height: 100%;
+		background-color: white;
+		float: right;
+	}
+
+	.hihi {
+		width: 100px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		background-color: #00a65a;
+		text-decoration: none;
+		color: white;
+	}
+
+	.hihi:hover {
+		text-decoration: none;
+		background-color: yellow;
+		color: white;
+	}
+
+	.xntt {
+		width: 283px;
+		height: 50px;
+		border-radius: 50px;
+		line-height: 50px;
+		text-align: center;
+		background-color: #00a65a;
+		text-decoration: none;
+		color: white;
+		margin-left: 500px;
+	}

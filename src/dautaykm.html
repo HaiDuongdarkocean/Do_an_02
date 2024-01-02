@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dâu tây22</title>
+	<link rel="stylesheet" type="text/css" href="../style/index.css">
+	<link rel="stylesheet" type="text/css" href="../style/ctsptao.css">
+	<link rel="stylesheet" type="text/css" href="../style/dmspNhapKhau.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery-3.2.1.min.js" type="text/javascript" ></script>
+	<script src="java.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="shortcut icon" type="image/png" href="../Media/img/dat.jpg"/>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <style >
+        body{
+            position: relative;
+        }
+        .img-bay{
+            position: absolute;
+            z-index: 99999;
+            height: 50px;
+            width: 50px;
+            top: 100px;
+            left: 100px;
+             border-radius: 100%;
+             border: 1px solid red;
+             object-fit: cover;
+            
+        }
+    </style>
+</head>
+<body>
+	<div class="dautayall">
+		<!-- đây là phần top-->
+		<div id="topdau">
+			<div class="od1">
+				<div class="tieude" align="center">
+					<div id="myNav" class="overlay">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<div class="overlay-content">
+							<a href="../src/index.html">Trang chủ</a>
+							<a href="../src/Nhapkhau.html">Sản phẩm</a>
+							<a href="../src/aboutUs.html">Giới thiệu</a>
+							
+							<a href="../src/blog.html">Blog</a>
+							<a href="../src/Lienhe.html">Liên hệ</a>
+						</div>
+					</div>
+
+
+					<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; Welcome to Fuji Online Shopping Store !</span>
+
+					<script>
+						function openNav() {
+							document.getElementById("myNav").style.width = "100%";
+						}
+
+						function closeNav() {
+							document.getElementById("myNav").style.width = "0%";
+						}
+					</script>
+				</div>
+			</div>
+			<div class="od2"> 
+				<div class="dangnhap">
+					<button class="buttonDangNhap" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập
+					</button>
+
+					<div id="id01" class="modal">
+
+						<form class="modal-content animate" action="/src/index.html">
+							<div class="imgcontainer">
+								<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;
+								</span>
+								<img src="../Media/img/dat.jpg" alt="Avatar" class="avatarDangNhap">
+							</div>
+
+							<div class="container">
+								<label for="uname"><b>Username</b></label>
+								<input class="inpputDNtext" type="text" placeholder="Enter Username" name="uname" required>
+
+								<label for="psw"><b>Password</b></label>
+								<input class="inpputDNpasword" type="password" placeholder="Enter Password" name="psw" required>
+
+								<button type="submit" class="buttonlogin">Login</button>
+								<label>
+									<input type="checkbox" checked="checked" name="remember"> Remember me
+								</label>
+							</div>
+
+							<div class="container" style="background-color:#f1f1f1">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#">password?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<script>
+                            // Get the modal
+                            var modal = document.getElementById('id01');
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) 
+                            {
+                            	if (event.target == modal) 
+                            	{
+                            		modal.style.display = "none";
+                            	}
+                            }
+                     </script>
+
+                </div>
+                <div class="dangki">
+                 	<a href="../src/dangki.html">
+                 		<button class="buttonDangKi" style="width:auto;">Đăng Kí
+                 		</button>
+                 	</a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- đây là phầm header tìm kiếm, giỏ hàng -->
+        <div class="dautrang">
+        	<div id="header">
+        		<div class="headerTKiem" >
+        			<div id="seach-box">
+        				<form>
+        					<input class="inputTkiem" type="text" name="search" placeholder="Tìm kiếm hoa quả.." id="tkiemtongquat" onkeyup="myFunctionTimKiemTongquat()" >
+        				</form>
+        				<i class="fa fa-search" aria-hidden="true" ></i>
+        			</div>
+        		</div>
+        		<!-- <script>
+        			function myFunctionTimKiemTongquat() {
+        				var input, filter, dmspNK_hang, spbcnk1, spbcnk1_ten, i, txtValue;
+        				input = document.getElementById("dmspNK_tkiem");
+        				filter = input.value.toUpperCase();
+        				dmspNK_hang = document.getElementById("dmspNK_hang");
+        				spbcnk1 = dmspNK_hang.getElementsByTagName("spbcnk1");
+        				for (i = 0; i < spbcnk1.length; i++) {
+        					spbcnk1_ten = spbcnk1[i].getElementsByTagName("spbcnk1_ten")[0];
+        					if (spbcnk1_ten) {
+        						txtValue = spbcnk1_ten.textContent || spbcnk1_ten.innerText;
+        						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        							spbcnk1[i].style.display = "inline-block";
+        						} else {
+        							spbcnk1[i].style.display = "none";
+        						}
+        					}       
+        				}
+        			}
+        		</script> -->
+
+        		<div class="headerLogo">
+
+        			<a href="../src/index.html"><img src="../Media/img/logofuji.png" class="logojuji" style="border-radius: 50%;border: 3px solid #ff9600;width: 120px; margin-top: 10px" ></a>
+        		</div>
+        		<div style="float: right; width: 250px; height: 60px; margin: 65px 0 0 35px; ">
+        			<a href="Lienhe.html" class="hotlinea"><i class="fa fa-phone" aria-hidden="true"></i>
+        				Hotline:0961394881
+        			</a>
+        			<a href="../src/giohang.html">
+        				<div id="giohang">
+
+        					<img src="../Media/img/cart.png">
+
+        				</div>
+        				<p class="sosp">
+        					9
+        				</p>
+        			</a>
+        		</div>
+        	</div>
+
+        	<!-- đây là phần div menu -->
+        	<br>
+        	<div class="menudau">
+        		<div class="navbar">
+        			<a href="../src/index.html"><i class="fa fa-home" aria-hidden="true" style="color: red" ></i><b>    Trang chủ</b></a>
+
+        			<div class="dropdown">
+        				<button class="dropbtn"><b>Sản phẩm</b> 
+        					<i class="fa fa-caret-down" style="color: red" ></i>
+        				</button>
+        				<div class="dropdown-content" align="center">
+        					<div class="MegaMenu">
+
+        						<div class="row">
+        							<div class="column">
+        								<h3><a href="">Trái cây nhập khẩu</a></h3>
+        								<a href="#" >Nho xanh Úc</a>
+        								<a href="#">Kiwi NL</a>
+        								<a href="#">Lựu Isarel</a>
+        								<a href="#">Lê Hàn Quốc</a>
+
+        							</div>
+        							<div class="column">
+        								<h3><a href="">Trái cây vùng miềm</a></h3>
+        								<a href="#">Bưởi da xanh</a>
+        								<a href="#">Dưa lưới</a>
+        								<a href="#">Cam xoàn</a>
+        								<a href="#">Xoài cát</a>
+
+        							</div>
+        							<div class="column">
+        								<h3><a href="">Trái cây dinh dưỡng</a></h3>
+        								<a href="#">Kiwi vàng NzL</a>
+        								<a href="#">Táo Rockit</a>
+        								<a href="#">Việt quất Peru</a>
+        								<a href="#">Nho đen Úc</a>
+
+        							</div>
+        							<div class="column">
+        								<h3><a href="">Rau củ quả tươi </a></h3>
+        								<a href="#">Củ cải</a>
+        								<a href="#">Ớt sapa</a>
+        								<a href="#">Cà chua Mĩ</a>
+        								<a href="#">Nho đen Úc</a>
+
+
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div> 
+
+
+
+        			<a href="../src/aboutUs.html"><b>Giới thiệu</b></a>
+
+
+
+        			<a href="../src/blog.html"><b>Blog </b></a>
+        			<a href="../src/Lienhe.html"><b>Liên hệ</b></a>
+        		</div>
+        	</div>
+        </div>
+
+        <!-- đây là phần banner-->
+        <div class="banner_nhapKhau">
+        	<div class="spnoibat_nhapkhau">
+        		<div id="bnerDuobannerNhapkhau_spnb">
+        			<div id="bnerDuoi_spnb_spnb">
+        				<div id="bnerDuoi1">
+        					<div id="bnerAnh_spnb">
+        						<a href="#">
+        							<img src="../Media/img/banner4.jpg">
+        						</a>
+        					</div>
+        				</div>
+        			</div>
+        			<h2 class="bn_p2_spnb1">
+        				<b>Dâu tây</b>
+        			</h2>
+        		</div>
+        	</div>
+        </div>
+        <br>
+
+
+
+
+        <div class="noidungdautay">
+        	<div id="chitiettao_trai">
+        		<div class="ctsp_tao">
+        			<div class="ctsptao_anhtren">
+        				<img src="../Media/img/dt7.jpg" style="width:450px; height:450px;object-fit: cover; ">
+        			</div>
+
+        			<div class="ctsptao_anhtren">
+        				<img src="../Media/img/dt2.jpg" style="width:450px; height:450px; object-fit: cover;">
+        			</div>
+
+        			<div class="ctsptao_anhtren">
+        				<img src="../Media/img/dt8.jpg" style="width:450px; height:450px; object-fit: cover;">
+        			</div>
+        			<div class="ctsptao_anhtren">
+        				<img src="../Media/img/dt11.jpg" style="width:450px; height:450px; object-fit: cover;">
+        			</div>
+
+        			<a class="prev_ctspanh" onclick="plusSlides(-1)">❮</a>
+        			<a class="next_ctspanh" onclick="plusSlides(1)">❯</a>
+
+        			<div class="caption-ctsp_tao">
+        				<p id="caption"></p>
+        			</div>
+
+        			<div class="ctspanh_nho_hang">
+        				<div class="ctspanh_nho_cot">
+        					<img class="anhnho cursor" src="../Media/img/dt7.jpg" style="width:100px; height: 80px; object-fit: cover;" onclick="currentSlide(1)" alt="">
+        				</div>
+        				<div class="ctspanh_nho_cot">
+        					<img class="anhnho cursor" src="../Media/img/dt2.jpg" style="width:100px; height: 80px; object-fit: cover;" onclick="currentSlide(2)" alt="">
+        				</div>
+        				<div class="ctspanh_nho_cot">
+        					<img class="anhnho cursor" src="../Media/img/dt8.jpg" style="width:100px; height: 80px; object-fit: cover;" onclick="currentSlide(3)" alt="">
+        				</div>
+        				<div class="ctspanh_nho_cot">
+        					<img class="anhnho cursor" src="../Media/img/dt11.jpg" style="width:100px; height: 80px; object-fit: cover;" onclick="currentSlide(4)" alt="">
+        				</div>
+        			</div>
+        			<script>
+        				var slideIndex = 1;
+        				showSlides(slideIndex);
+
+        				function plusSlides(n) {
+        					showSlides(slideIndex += n);
+        				}
+
+        				function currentSlide(n) {
+        					showSlides(slideIndex = n);
+        				}
+
+        				function showSlides(n) {
+        					var i;
+        					var slides = document.getElementsByClassName("ctsptao_anhtren");
+        					var dots = document.getElementsByClassName("anhnho");
+        					var captionText = document.getElementById("caption");
+        					if (n > slides.length) {slideIndex = 1}
+        						if (n < 1) {slideIndex = slides.length}
+        							for (i = 0; i < slides.length; i++) {
+        								slides[i].style.display = "none";
+        							}
+        							for (i = 0; i < dots.length; i++) {
+        								dots[i].className = dots[i].className.replace(" chitietspanh", "");
+        							}
+        							slides[slideIndex-1].style.display = "block";
+        							dots[slideIndex-1].className += " chitietspanh";
+        							captionText.innerHTML = dots[slideIndex-1].alt;
+        						}
+        			</script>
+        		</div>
+     		</div>
+     		<div id="chitiettao_phai">
+
+       				<h1>
+       					Dâu tây
+       					<hr style="border: 1px solid #00a65a; ">
+
+
+       				</h1>
+       				<h3 style="color: #00a65a">
+
+       					Giá: 799.000 <u>đ</u>
+       				</h3>
+       				<b>Đánh giá: </b>
+       				<i class="fa fa-star-o" aria-hidden="true"></i>
+       				<i class="fa fa-star-o" aria-hidden="true"></i>
+       				<i class="fa fa-star-o" aria-hidden="true"></i>
+       				<i class="fa fa-star-o" aria-hidden="true"></i>
+       				<i class="fa fa-star-o" aria-hidden="true"></i>
+
+       				<p><b>Mã sản phẩm:</b> dautay1</p>
+       				<p><b>Xuất xứ:</b> Hàn Quốc</p>
+       				<p><b>Chất lượng:</b> Ngọt , chua nhẹ, thơm</p>
+       				<p><b>Đơn vị tính:  </b>kg</p>
+       				<hr style="border: 1px solid #00a65a; ">
+       				<p>Liên hệ trực tiếp hotline: 0961394881 để nhận được sự tư vấn tốt nhất về các sản phẩm của chúng tôi.</p>
+       				<hr style="border: 1px solid #00a65a; ">
+       				<p class="themgiohang_p"><a href="javascript:void(0)" class="btn_themvaogiohang btn-buy-now" role="button">Thêm vào giỏ hàng </a></p>
+
+       		</div>
+            <!-- <img src="../Media/img/dt7.jpg" class="img-bay"> -->
+            <script >
+                $(document).on('click', '.btn-buy-now', function(e)
+                {
+                    e.preventDefault();
+                   
+                    var parent = $(this).parents('noidungdautay');
+                    var src = parent.find('img').attr('src');
+                    var parTop = parent.off().top;
+                    var parLeft = parent.off().left;
+                    $('<img>',{
+                        class: 'img-bay',
+                        src: src
+                    }).appendTo('body').css({
+                         'top' :parTop,
+                         'left' :parLeft
+                    });
+                   
+
+
+                });
+            </script>
+
+        	<div id="chitiettao_trong">
+			<br>
+			
+			<div class="Cam_ket">
+
+				<p class="ctsp_camket">
+
+					CAM KẾT
+
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+					Hoa quả tươi sạch 
+
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+					Không chất bảo quản
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+					Dịch vụ chuyên nghiệp
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+					Không thuốc biến đổi gen
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+					Không hàng Trung Quốc
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+					Giá cả cạnh tranh
+				</p>
+				<br>
+			</div>
+			<br>
+			&nbsp;&nbsp;&nbsp;<img src="../Media/img/12.jpg" alt="hihi">
+			<br><br>
+
+			<div class="Ban_chay">
+				<p class="ctsp_banchay">SẢN PHẨM BÁN CHẠY</p>
+				<div class="spbc1">
+					<div class="bc_img">
+						<img src="../Media/img/dt7.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+					</div>
+					<div class="bc_cap">
+						<h4><a href="../src/dautay.html">Dâu tây Korea</a></h4>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<p>$ 189.000 <u>đ</u></p>
+
+						<p><a href="" class="bc_cap_a">Mua ngay 
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a></p>
+					</div>
+				</div>
+				<div class="spbc1">
+					<div class="bc_img">
+						<img src="../Media/img/kw4.jpg"  alt="" style="width: 100%; height: 100%">
+					</div>
+					<div class="bc_cap">
+						<h4><a href="">Kiwi xanh Pháp</a></h4>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<p>$ 109.000 <u>đ</u></p>
+						<p><a href="" class="bc_cap_a">Mua ngay 
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a></p>
+					</div>
+				</div>
+				<div class="spbc1">
+					<div class="bc_img">
+						<img src="../Media/img/mc1.gif"  alt="" style="width: 100%; height: 100%">
+					</div>
+					<div class="bc_cap">
+						<h4><a href="">Măng cụt</a></h4>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<p>$ 99.000 <u>đ</u></p>
+						<p><a href="" class="bc_cap_a">Mua ngay 
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a></p>
+					</div>
+				</div>
+				<div class="spbc1">
+					<div class="bc_img">
+						<img src="../Media/img/cd1.jpg"  alt="" style="width: 100%; height: 100%">
+					</div>
+					<div class="bc_cap">
+						<h4><a href="">Cam đỏ Úc</a></h4>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<p>$ 159.000 <u>đ</u></p>
+						<p><a href="" class="bc_cap_a">Mua ngay 
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a></p>
+					</div>
+				</div>
+
+			</div>
+			<br><br>
+			<div class="Tin_tuc_moi">
+				<p class="ctsp_banchay">Tin tức mới</p>
+				<div class="tt1">
+					<div class="bc_img">
+						<img src="../Media/img/tt4.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+					</div>
+					<div class="tt_cap">
+						<h4><a href="../src/ctblog6.html">
+						Những trái cây có nước ép ngon tuyệt !</a></h4>
+						
+					</div>
+					<p>
+					Mới chớm hè mà nắng nóng oi bức, cơ thể uể oải, thiếu nước, thiếu khoáng. Do đó cần phải bổ sung ngay dinh dưỡng cho cơ thể!
+				    </p>
+				</div>
+				<div class="tt1">
+					<div class="bc_img">
+						<img src="../Media/img/tt1.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+					</div>
+					<div class="tt_cap">
+						<h4><a href="../src/ctblog5.html">Cảm cúm nên ăn gì cho nhanh khỏi</a></h4>
+						
+					</div>
+					<p>
+					Thời tiết giao mùa, nắng mưa thất thường dẫn đến cơ thể dễ bị virus xâm nhập và hệ miễn dịch bị suy yếu. Các bệnh...
+				    </p>
+				</div>
+				<div class="tt1">
+					<div class="bc_img">
+						<img src="../Media/img/tt3.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+					</div>
+					<div class="tt_cap">
+						<h4><a href="../src/ctblog3.html">7 loại trái cây đánh bay độc tố trong cơ thể</a></h4>
+						
+					</div>
+					<p>
+					Thời tiết giao mùa, nắng mưa thất thường dẫn đến cơ thể dễ bị virus xâm nhập và hệ miễn dịch bị suy ...
+				    </p>
+				</div>
+				
+				<div class="tt1">
+					<div class="bc_img">
+						<img src="../Media/img/tt2.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+					</div>
+					<div class="tt_cap">
+						<h4><a href="../src/ctblog4.html">Cuối tuần chiêu đãi cả nhà việt quất Smoothies</a></h4>
+						
+					</div>
+					<p>
+						Smoothies, hay sinh tố đã không còn xa lạ gì với chúng ta phải không  nào. Trước đây, sinh tố chỉ đơn thuần...
+					</p>
+				</div>
+
+				
+			</div>
+
+		</div>
+       		<div class="chitiettao_mota">
+       			<h2 style="width: 400px;height: 50px;background-color: #00a65a; color: white; text-align: center; line-height: 50px; border-radius: 20px;">* Mô tả sản phẩm *</h2>
+       			<h2 align="center" style="color: black">DÂU TÂY HÀN QUỐC</h2>
+       			<p>
+       				<b><i class="fa fa-snowflake-o" aria-hidden="true"></i>
+       				Có thể bạn chưa biết!</b>
+       			</p>
+
+       			<p>
+       				Dâu tây chứa nhiều vitamin và chất khoáng, giúp thúc đẩy chuyển hóa các chất  trong cơ thể, làm máu huyết lưu thông, có thể dùng khi bị bệnh tiểu  đường.Tăng sức đề kháng, chống nhiễm trùng, nhiễm độc, cảm cúm và chống stress, chống lão hóa, giảm tác hại của thuốc lá.
+       			</p>
+
+       			<p><b>1. Giống và chủng loại</b></p>
+
+       			<div class="mta_p_tao">
+       				<p>
+       					– Xuất xứ: Hàn Quốc 
+       				</p>
+       				<p>
+       					– Mùa vụ: từ tháng 12 – tháng 5 năm sau
+       				</p>
+
+       			</div>
+
+       			<p><b>2. Đặc điểm sản phẩm </b></p>
+       			<div style="float: left; width: 500px">
+       				&nbsp;&nbsp;&nbsp;<img src="../Media/img/dt15.jpg" width="450px">
+       			</div>
+
+       			<p>
+       				–   Những quả dâu tây to, mọng, màu đỏ tươi, hình trái tim, giàu dinh dưỡng vẫn còn nguyên cuống và đài xanh với mùi thơm hấp dẫn cùng vị dâu ngọt lẫn chua rất được ưa chuộng tại Việt Nam.
+       			</p>
+       			<p>
+       				- Tăng sức đề kháng, chống nhiễm trùng, nhiễm độc, cảm cúm và chống stress, chống lão hóa, giảm tác hại của thuốc lá.
+       			</p>
+       			<p>
+       				– Dùng chữa các chứng như ho do phổi nóng, cổ họng sưng đau, chán ăn, tiểu gắt, thiếu máu suy nhược, ung nhọt, say rượu…
+       			</p>
+
+
+       			<br><br>
+       			<p>
+       				<b>3. Lưu ý bảo quản</b>
+       			</p>
+       			<p>
+       				– Chỉ rửa dâu trước khi ăn: Trái dâu tây hỏng nhanh vì chúng xốp và dễ hấp thụ nước, khiến chúng dễ mọc mốc. Ngoài ra, nếu bạn rửa dâu mà không ăn ngay, chúng sẽ mất vị ngọt, thơm, trở nên nhạt nhẽo và nhanh mềm.
+       			</p>
+       			<p>
+       				–  Nếu thấy một quả dâu tây bị dập và hư, hoặc đã lên mốc, bạn cần bỏ quả này đi ngay lập tức. Nếu không, mốc sẽ lây lan rất nhanh trong hộp dâu tây. 
+       			</p>
+       			<p>
+       				– Bạn hãy chọn một lọ thủy tinh hoặc hộp nhựa, túi nhựa đựng thức ăn, trải dưới đáy một lớp khăn giấy, sau đó cho dâu tây vào. Không nên xếp dâu chồng chất lên nhau. Khăn giấy hấp thụ độ ẩm giúp kéo dài thời gian tươi ngon của dâu.
+       			</p>
+       			<p>
+       				- Đặc biệt lưu ý dâu tây rất dễ tiếp xúc vậy nên khi cầm dâu tây, bạn nên đi gang tây túi bóng.
+       			</p>
+       		</div>
+
+       		<br>
+       		<div class="sanphamlienquan_ctsp">
+       			<h2 style="width: 400px;height: 50px;background-color: #00a65a; color: white; text-align: center; line-height: 50px; border-radius: 20px;">* Sản phẩm liên quan *</h2>
+
+       			<div class="dmspNK_hang">
+
+       			<div class="spbcnk1">
+       				<a href="">
+       					<div class="spbcnk1_tren">
+       						<div class="spbcanhhover">
+       							<div class="spbcanhhover-inner">
+       								<div class="spbcanhhover-tren">
+       									<img src="../Media/img/dt14.jpg" width="100%" height="100%" style="object-fit: cover;" >
+       								</div>
+       								<div class="spbcanhhover-duoi">
+       									<img src="../Media/img/dt11.jpg" width="100%" height="100%" style="object-fit: cover;" >
+       								</div>
+       							</div>
+       						</div>
+       					</div>
+       				</a>
+       				<div class="spbcnk1_duoi">
+       					<br>
+       					<p class="spbcnk1_ten"><a href=""><b>Dâu tây</b></a></p>
+       					<p class="spbcnk1_xx">Xuất xứ: Australia</p>
+       					<p class="spbcnk1_gia">Giá: 799<sup>đ</sup>/kg</p>
+       					<a href=""> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+       				</div>
+       			</div>
+
+       			<div class="spbcnk1">
+       				<a href="">
+       					<div class="spbcnk1_tren">
+       						<div class="spbcanhhover">
+       							<div class="spbcanhhover-inner">
+       								<div class="spbcanhhover-tren">
+       									<img src="../Media/img/vq5.png" width="100%" height="100%" style="object-fit: cover;" >
+       								</div>
+       								<div class="spbcanhhover-duoi">
+       									<img src="../Media/img/vq3.jpg" width="100%" height="100%" style="object-fit: cover;" >
+       								</div>
+       							</div>
+       						</div>
+       					</div>
+       				</a>
+       				<div class="spbcnk1_duoi">
+       					<br>
+       					<p class="spbcnk1_ten"><a href=""><b>Việt Quất</b></a></p>
+       					<p class="spbcnk1_xx">Xuất xứ: Peru</p>
+       					<p class="spbcnk1_gia">Giá: 999<sup>đ</sup>/kg</p>
+       					<a href=""> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+       				</div>
+       			</div>
+
+       			<div class="spbcnk1">
+       				<a href="">
+       					<div class="spbcnk1_tren">
+       						<div class="spbcanhhover">
+       							<div class="spbcanhhover-inner">
+       								<div class="spbcanhhover-tren">
+       									<img src="../Media/img/dlv1.jpg" width="100%" height="100%" style="object-fit: cover;" >
+       								</div>
+       								<div class="spbcanhhover-duoi">
+       									<img src="../Media/img/dlv2.jpg" width="100%" height="100%" style="object-fit: cover;" >
+       								</div>
+       							</div>
+       						</div>
+       					</div>
+       				</a>
+       				<div class="spbcnk1_duoi">
+       					<br>
+       					<p class="spbcnk1_ten"><a href=""><b>Dưa lê vàng</b></a></p>
+       					<p class="spbcnk1_xx">Xuất xứ: Hàn Quốc</p>
+       					<p class="spbcnk1_gia">Giá: 599<sup>đ</sup>/kg</p>
+       					<a href=""> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+       				</div>
+       			</div>
+			
+       			<!-- <div class="dmspNK_cot">
+       				<div class="dmspNK_cot_c1">
+       					<div class="dmspNK_c1_anh" >
+       						<img src="../Media/img/dt14.jpg">
+       					</div>
+       					<div class="dmspNK_c1_p">
+       						<p class="spbcnk1_ten"><a href=""><b>Dâu tây</b></a></p>
+       						<p class="spbcnk1_xx">Xuất xứ: Australia</p>
+       						<p class="spbcnk1_gia">Giá: 799<sup>đ</sup>/kg</p>
+       						<a href=""> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+       					</div>
+       				</div>
+       			</div> -->
+       			
+
+       		</div>
+       		<div align="center" class="lhe_dautay"><br><br>
+             
+                <p>Liên hệ đặt hàng:
+                    
+                    ☎️ 0221 376 8998/0961394881
+                </p>
+                <p>🏡 Đường 196, Bao bì, Mỹ hào, Hưng yên
+                </p>
+                <p><a href="../src/index.html">HỆ THỐNG HOA QUẢ SẠCH FUJI</a>
+                    An toàn cho sức khỏe gia đình bạn!
+                </p><br><br>
+
+            </div>
+
+       		
+
+       		</div>
+
+       		
+
+
+
+
+
+
+
+
+        	<!-- <div id="chitiettao_trong">
+        		
+        	</div> -->
+
+
+
+        </div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<!-- đây là cuối trang-->
+		<img src="../Media/img/fotter.PNG" alt="" class="futter">		
+		<div class="cuoitrang">
+				<div class="chan1">
+					<div class="chan1-newlette">
+						<p> <i class="fa fa-envelope" aria-hidden="true" style=" color: white"></i>&nbsp;Bản tin</p>
+					</div>
+					<div class="chan1-giua">
+						<p>Đăng ký nhận lời khuyên, tin tức và khuyến mại</p>
+					</div>
+
+					<div class="chan1-email">
+						<input type="text" placeholder="Địa chỉ email của bạn..." name="">
+						<a href="../src/index.html">&nbsp;<button type="">Đăng ký</button></a>
+					</div>
+				</div>
+				<div class="chan2">
+				
+					<div class="chan2-1">
+						<div class="chan2-1-1">
+							<div class="chan2-1-1-tren">
+								<br><br>
+								<div class="chan2-about">
+								<h3 style="color: white">&nbsp;&nbsp;VỀ CHÚNG TÔI</h3>
+								<img src="../Media/img/ab1.png" alt="">
+								<br><br>
+								<p class="chan2-about-p">&nbsp; Sản phẩm của chúng tôi được thu hoạch mới, rửa sẵn cho hộp và cuối cùng [...]</p>
+								</div>
+
+
+								<div id="chan2-thongtin">
+									<br>
+									<h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THÔNG TIN</h3>
+									<ul>
+										<li><a href=" ">Chính sách mua hàng</a></li>
+										<li><a href="">Chính sách đổi trả</a></li>
+										<li><a href="">Phương thức thanh toán</a></li>
+										<li><a href="">Đánh giá</a></li>
+										<li><a href="">Liên hệ chúng tôi</a></li>
+									</ul>
+								</div>
+								<div id="chan2-vechungtoi">
+									<h3 style="color: white">CÔNG TY CP XUẤT NHẬP KHẨU FUJIi</h3>
+									<p style="color: #999">
+										<i class="fa fa-home" aria-hidden="true"></i>&nbsp;
+										Trụ sở: Số nhà 24 D7, KĐT Đại Kim - Định Công, P.Đại Kim, Q.Hoàng Mai, TP.HN
+									</p>
+									<p style="color: #999"><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;&nbsp;Điện thoại: 0989.96.69.96 - 0988 444 123</p>
+									<p style="color: #999"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Website: www.hoaquafuji.com</p>
+									<p style="color: #999">Để đăng ký sản phẩm và yêu cầu chung xin vui lòng liên hệ với chúng tôi</p>
+									<p style="color: #999">Trân thành cảm ơn !</p>
+								</div>
+							</div>
+							
+
+						</div>
+					</div>
+					<div class="chan2-2">
+						<div class="byYen">
+							<div class="chan2-2-trai">
+								<p>© 2019 Hệ thống hoa quả sạch Fuji Fruit by: <a href="" class="yen" >Bui Tien Dat</a></p>
+							</div>
+							<div class="chan2-2-phai">
+								<p>Follow us
+									<a href="#" class="fa fa-facebook" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background: #3B5998;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+									<a href="#" class="fa fa-google" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background: #dd4b39;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+									<a href="#" class="fa fa-twitter" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background: #55ACEE;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+									<a href="#" class="fa fa-youtube" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background: #bb0000;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+									<a href="#" class="fa fa-instagram" style="width: 40px; height: 40px;
+							        border-radius: 100%;
+									background:  #125688;
+									color: #fff;
+									line-height: 40px;
+									text-align: center;
+									font-size: 18px;"></a>
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+
+
+		<div id="chan2-icon">
+				<ul class="chan2-ul">
+					<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-facebook-official" aria-hidden="true" style="color:#3B5998 "></i>&nbsp;&nbsp;&nbsp;Facebook</a></li>
+					<li class="chan2-li"><a href="#">&nbsp;&nbsp<i class="fa fa-phone-square" aria-hidden="true" style="color: #00a65a"></i>&nbsp;&nbsp;&nbsp;Tư vấn</a></li>
+					<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-google-plus-square" aria-hidden="true" style="color: #bb0000"></i>&nbsp;&nbsp;&nbsp;Gmail</a></li>
+
+					<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-twitter-square" aria-hidden="true" style="color: #55ACEE"></i>&nbsp;&nbsp;&nbsp;Twitter</a></li>
+				</ul>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</body>
+</html>

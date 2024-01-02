@@ -1,0 +1,335 @@
+#dautrangtao {
+	width: auto;
+	height: 500px;
+	background-color: pink;
+}
+
+#chitiettao {
+	width: 1200px;
+	height: 2334px;
+	background-color: white;
+	margin: auto;
+}
+
+
+/*
+phần chi tiết ảnh bên trái*/
+#chitiettao_trai {
+	width: 480px;
+	height: 640px;
+	background-color: white;
+	float: left;
+
+}
+
+.ctsp_tao {
+	position: relative;
+}
+
+/* ẩn hình ảnh theo mặc định*/
+.ctsptao_anhtren {
+	display: none;
+}
+
+/* Thêm một con trỏ khi di chuột qua hình ảnh thu nhỏ */
+.cursor {
+	cursor: pointer;
+}
+
+/*  */
+.prev_ctspanh,
+.next_ctspanh {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.next_ctspanh {
+	right: 40px;
+	border-radius: 3px 0 0 3px;
+}
+
+/*Khi di chuột, thêm màu nền đen với một chút nhìn xuyên qua*/
+.prev_ctspanh:hover,
+.next_ctspanh:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+
+
+.ctspanh_nho_hang:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Six ctspanh_nho_cots side by side */
+.ctspanh_nho_cot {
+	float: left;
+	width: 24.3%;
+}
+
+/* Thêm hiệu ứng trong suốt cho hình ảnh thu nhỏ*/
+.anhnho {
+	opacity: 0.6;
+}
+
+.chitietspanh,
+.anhnho:hover {
+	opacity: 1;
+}
+
+
+
+
+/*chi tiết sản phẩm bên phải*/
+#chitiettao_phai {
+	width: 390px;
+	height: 640px;
+	background-color: white;
+	float: left;
+
+}
+
+.fa fa-star {
+	background-color: white;
+}
+
+
+.themgiohang_p {
+	width: 180px;
+	height: 50px;
+	background-color: #00a65a;
+	border: 1px solid white;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	margin-left: 25%;
+}
+
+.btn_themvaogiohang {
+	color: white;
+
+}
+
+.btn_themvaogiohang:hover {
+	text-decoration: none;
+	color: red;
+}
+
+
+/* phần bên trong*/
+#chitiettao_trong {
+	width: 300px;
+	height: 2265px;
+	background-color: white;
+	float: right;
+}
+
+.Cam_ket {
+	border-bottom: 1px solid #dee2e6;
+	border-left: 1px solid #dee2e6;
+	border-right: 1px solid #dee2e6;
+	width: 295px;
+	height: 300px;
+}
+
+.ctsp_camket {
+	background-color: #00a65a;
+	width: 293px;
+	height: 50px;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	font-family: 'Itim', cursive;
+	font-size: 26px;
+}
+
+.Cam_ket p i {
+	color: #00a65a;
+}
+
+
+
+
+.ctsp_banchay {
+
+	width: 293px;
+	height: 50px;
+	color: black;
+	text-align: center;
+	line-height: 105px;
+	font-family: 'Itim', cursive;
+	font-size: 26px;
+}
+
+
+
+.Ban_chay {
+
+	width: 295px;
+	height: 574px;
+}
+
+.spbc1 {
+	width: 289px;
+	height: 125px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+
+.bc_img {
+	float: left;
+	background-color: pink;
+	width: 94px;
+	height: 94px;
+	margin-top: 13px;
+}
+
+.bc_cap {
+	float: right;
+	background-color: white;
+	width: 180px;
+	height: 113px;
+	padding: 5px;
+	line-height: 0px;
+
+}
+
+.Ban_chay .spbc1 .bc_cap h4 a {
+	color: #696969;
+}
+
+.Ban_chay .spbc1 .bc_cap h4 a:hover {
+	text-decoration: none;
+	color: #ffa02c;
+}
+
+.bc_cap_a {
+	color: red;
+}
+
+.bc_cap_a:hover {
+	text-decoration: none;
+	color: #ffa02c;
+}
+
+
+
+.Tin_tuc_moi {
+
+	width: 295px;
+	height: 901px;
+}
+
+.tt1 {
+	width: 289px;
+	height: 195px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+
+.bc_img {
+	float: left;
+	background-color: pink;
+	width: 94px;
+	height: 94px;
+	margin-top: 13px;
+	object-fit: cover;
+}
+
+.tt_cap {
+	float: right;
+	background-color: white;
+	width: 180px;
+	height: 107px;
+	padding: 5px;
+	line-height: 24px;
+	font-size: 17px;
+	padding-top: 0px;
+
+}
+
+.tt1 .tt_cap h4 a {
+	color: #00a65a;
+}
+
+.tt1 .tt_cap h4 a:hover {
+	text-decoration: none;
+	color: #ffa02c;
+}
+
+
+
+
+
+
+/*Đây là phần mô tả chi tiết sản phẩm*/
+.chitiettao_mota {
+	width: 860px;
+	height: 1030px;
+	background-color: white;
+	border: 1px solid #e5e5e5;
+	color: black;
+	float: left;
+	margin-left: 10px;
+}
+
+.mta_p_tao {
+	padding: 0px;
+}
+
+.chitiettao_mota p {
+	margin-left: 20px;
+	margin-left: 20px;
+}
+
+/* sản phẩm liên quan*/
+.splienquan {
+	float: left;
+	width: 900px;
+	height: 615px;
+	background-color: yellow;
+}
+
+
+
+
+
+.noidungdautay {
+	width: 1200px;
+	margin: auto;
+	height: 2500px;
+	background-color: white;
+}
+
+.sanphamlienquan_ctsp {
+	height: 591px;
+	background-color: white;
+	width: 899px;
+	float: left;
+}
+
+.lhe_dautay {
+	margin-left: 338px;
+
+}

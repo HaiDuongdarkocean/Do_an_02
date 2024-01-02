@@ -1,0 +1,1034 @@
+<html style="height: auto; min-height: 100%;"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hóa đơn xuất</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+     <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="all"
+    rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="all"
+  rel="stylesheet" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"type="text/javascript" ></script>
+  <script type="text/javascript">
+   function deleteRow(r) {
+    var i=confirm("Bạn có chắc chắn muốn xóa hay không?");
+    if(i==true)
+    {
+      var i = r.parentNode.parentNode.rowIndex;
+      document.getElementById("example1").deleteRow(i);
+    }
+  }
+</script>
+<style>
+  table tr:not(:first-child){
+    cursor: pointer;transition: all .25s ease-in-out;
+  }
+  table tr:not(:first-child):hover{background-color: #ddd;}
+  #shoppingCart{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 99;
+  }
+  #addRow1{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 99;
+  }
+   .dh,.dh1,.dh2,.dh3,.dh4{
+      top: 0;
+      left: 0;
+      height:700px;
+      width: 100%;
+      display: none;
+      position: absolute;
+      z-index: 9999;
+    }
+      .tieude{
+      height: 69px;
+      border-bottom: 1px solid #0a080847;
+    }
+    .tieude p{
+      float: left;
+      padding: 19px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #000000ab;
+    }
+    .stt{
+      height: 80px;
+      border-bottom: 1px solid #bbbaba;
+    }
+    .stt p{
+     float: left;
+     color: #04485d;
+     padding: 25px;
+   }
+  #cartItemsContainer {
+   position: relative;
+   width: 600px;
+   left: 50%;
+   top: 45px;
+   height: 400px;
+   margin-left: -300px;
+   padding: 40px;
+   box-shadow: 0 0 10px black;
+   background: #e9e9e9;
+   overflow: auto;
+ }
+ #cartItemsContainer i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.huong1{
+  top: 0;
+  left: 0;
+  height:700px;
+  width: 100%;
+  display: none;
+  position: absolute;
+  z-index: 9999;
+}
+#cartItemsContainer2{
+  background: #3c8dbc;
+  width: 300px;
+  position: relative;
+  left: 94%;
+  top: 51px;
+  margin-left: -288px;
+  padding: 10px;
+  overflow: auto;
+}
+#cartItemsContainer2 p{
+ padding-top: 10px;
+ color: #ffffffa8;
+ text-align: center;
+}
+ #cartItemsContainer3{
+     background: #fff;
+     width: 700px;
+     position: relative;
+     left: 94%;
+     top: 235px;
+     margin-left: -900px;
+     padding: 10px;
+     box-shadow: 0px 0px 2px 2px #00000040;
+     overflow: auto;
+   }
+.fas{
+  position: absolute;
+  padding-top: 10px;
+  color: #666;
+  margin-left: -24px;
+}
+.far{
+  font-size: 20px;
+  float: right;
+  color: #d47979;
+  margin-bottom: 10px;
+}
+label{
+ display: inline-block;
+ max-width: 100%;
+ padding-top: 10px;
+ margin-bottom: 5px;
+ color: #043c65;
+ font-size: 14px;
+ font-family: sans-serif;
+ font-weight: normal;
+}
+</style>
+<!-- /.box-header -->
+<script type="text/javascript">
+  function huy(){
+    txtma.value="";
+    txtnh.value="";
+    txtncc.value="";
+    txtsl.value="";
+    txttt.value="";
+  }
+  function huy1(){
+    txtma1.value="";
+    txtnh1.value="";
+    txtncc1.value="";
+    txtsl1.value="";
+    txttt1.value="";
+  }
+</script>
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="skin-blue sidebar-mini" style="height: auto; min-height: 100%;">
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../../index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>A</b>LT</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Admin</b></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                 <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">Bạn có 4 tin nhắn</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/dat.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Bui Tien Dat
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Tôi muốn mua hàng</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/dat.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Duyên pibo
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Bạn gới thiệu hoa quả cho tôi?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/user8-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/user8-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Yến Hải
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Tôi muốn mua hàng?</p>
+                    </a>
+                  </li>
+               
+                </ul>
+              </li>
+              <li class="footer"><a href="#">Xem tất cả</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">Bạn có 10 thông báo</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 thông báo mới của ngày hôm nayy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Đơn hàng của Bui Tien Dat
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-red"></i> 5 đơn hàng cần xác nhận
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green"></i> 25 đơn đã nhận
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> Bạn cần đăng nhập user
+                    </a>
+                  </li>
+                </ul>
+              </li>Xem tất cảV</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">Bạn có 9 lời mời kết bạn</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+               
+              </li>
+              <li class="footer">
+                <a href="#">Xem tất cả</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="dist/img/dat.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Bui Tien Dat</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="dist/img/dat.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Bui Tien Dat
+                  <small>04-03-2003</small>
+                </p>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Đăng xuất</a>
+                </div>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+               
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+         
+        </ul>
+      </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="height: auto;">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/dat.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Bui Tien Dat</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu tree" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview menu-open">
+          <a id="Trangchu" style="cursor: pointer;">
+            <i class="fa fa-dashboard"></i> Trang chủ
+          </a>
+        </li>
+        <script>
+            $(document).ready(function() {
+                $('#Trangchu').click(function(event) {
+                    /* Act on the event */
+                    window.location = "index.html";
+                });
+            });
+        </script>
+       <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Quản lý loại sản phẩm</span>
+
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="dsloaisp.html"><i class="fa fa-circle-o"></i>DS Loại sản phẩm</a></li>
+            <li><a href="themLSP.html"><i class="fa fa-circle-o"></i>Thêm mới Loại sản phẩm</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Quản lý sản phẩm</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="DsSanPham.html"><i class="fa fa-circle-o"></i>Danh sách Sản phẩm</a></li>
+            <li><a href="ThemSP.html"><i class="fa fa-circle-o"></i>Thêm sản phẩm mới</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Quản lý khách hàng</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="dskhachhang.html"><i class="fa fa-circle-o"></i>Danh sách khách hàng</a></li>
+            <li><a href="themKH.html"><i class="fa fa-circle-o"></i>Thêm khách hàng</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Quản lý nhà cung cấp</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="dsNCC.html"><i class="fa fa-circle-o"></i>Danh sách nhà cung cấp</a></li>
+            <li><a href="themNCC.html"><i class="fa fa-circle-o"></i>Thêm nhà cung cấp</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Quản lý nhân viên</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="dsNV.html"><i class="fa fa-circle-o"></i>Danh sách nhân viên</a></li>
+            <li><a href="themNV.html"><i class="fa fa-circle-o"></i>Thêm nhân viên</a></li>
+            
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Quản lý đơn hàng</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="hdn.html"><i class="fa fa-circle-o"></i>Đơn hàng nhập</a></li>
+            <li><a href="hdx.html"><i class="fa fa-circle-o"></i>Đơn hàng bán</a></li>
+          </ul>
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Thống kê báo cáo</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="doanhthuThang.html"><i class="fa fa-circle-o"></i>Doanh thu trong tháng</a></li>
+            <li><a href="hangbanchay.html"><i class="fa fa-circle-o"></i>Hàng bán chạy</a></li>
+             <li><a href="hangtonkho.html"><i class="fa fa-circle-o"></i>Hàng tồn kho</a></li>
+          </ul>
+        </li>
+       
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height: 1735px;">
+            <!-- Content Header (Page header) -->
+            <!-- Main content -->
+   <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title" style="font-size: 25px;font-family: sans-serif;font-weight: bold;"> Hóa đơn xuất</h3>
+          </div>
+          <!-- /.box-header -->
+          <button type="summit" class="addRow" value="Thêm mẹo vặt" style="    margin-left: 100px;
+          width: 169px;
+          font-family: sans-serif;
+          font-size: 16px;
+          color: #fff;
+          font-weight: 700;
+          height: 35px;
+          border: 3px solid #00a65a;
+          background: red;
+          padding: 4px;"><i class="fa fa-plus" aria-hidden="true"></i> Thêm hóa đơn</button><p></p>
+          <div id="shoppingCart">
+            <div id="cartItemsContainer">
+              <p style="color: #212b35;
+              font-size: 25px;
+              font-family: sans-serif;
+              font-weight: bold;">Sửa hóa đơn</p>
+              <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true" style="color: #0d71ec;font-size: 30px;"></i>
+              <div class="tt" style="background: #fff;padding: 10px;height: 240px">
+                <label for= "exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mã hóa đơn</font></font></label>
+                <input type="text" class="form-control" id="txtma" placeholder="Nhập mã hóa đơn">
+                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ngày nhập</font></font></label>
+                <input type="text" class="form-control" id="txtnh" placeholder="Nhập ngày nhập">    
+                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Khách hàng</font></font></label>
+                <input type="text" class="form-control" id="txtncc" placeholder="Nhập khách hàng">
+                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nhân viên</font></font></label>
+                <input type="text" class="form-control" id="txtsl" placeholder="Nhập số lượng">
+                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tổng tiền</font></font></label>
+                <input type="text" class="form-control" id="txttt" placeholder="Nhập tổng tiền">
+                <button onclick="editRow();" style="margin-top: 25px;color: #fff; background: #3c8dbc;border: none;border-radius: 3px;height: 35px;float: left;font-weight: 500">Sửa hóa đơn</button><br><br>
+                <button type="submit" onclick="huy()" class="btnprimary" style="width: 80px;height: 36px; background: #3c8dbc;color: #fff;font-weight: 500;border: none;float: left;margin-left: 10px;margin-top: -15px;border-radius: 3px;"><font style="vertical-align: inherit;">Hủy</font></button>
+
+              </div>
+            </div>
+          </div>
+          <div id="addRow1">
+            <div id="cartItemsContainer">
+              <p style="color: #212b35;
+              font-size: 25px;
+              font-family: sans-serif;
+              font-weight: bold;">Thêm hóa đơn</p>
+              <i class="fa fa-times-circle-o fa-3x addRow" aria-hidden="true" style="color: #0d71ec;font-size: 30px;"></i>
+              <div class="tt">
+                <label for= "exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mã hóa đơn</font></font></label>
+                <input type="text" class="form-control" id="txtma1" placeholder="Nhập mã hóa đơn">
+                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ngày nhập</font></font></label>
+                <input type="text" class="form-control" id="txtnh1" placeholder="Nhập ngày nhập">    
+                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Khách hàng</font></font></label>
+                <input type="text" class="form-control" id="txtncc1" placeholder="Nhập khách hàng">
+                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mã nhân viên</font></font></label>
+                <input type="text" class="form-control" id="txtsl1" placeholder="Nhập số lượng">
+                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tổng tiền</font></font></label>
+
+                <input type="text" class="form-control" id="txttt1" placeholder="Nhập tổng tiền">
+                <button onclick="addRow();" style="margin-top: 25px;color: #fff; background: #3c8dbc;border: none;border-radius: 3px;height: 35px;float: left;font-weight: 500">Thêm hóa đơn</button>
+                <button type="submit" onclick="huy1()" class="btnprimary" style="width: 80px;height: 36px; background: #3c8dbc;color: #fff;font-weight: 500;border: none;float: left;margin-left: 10px;margin-top: 25px;border-radius: 3px;"><font style="vertical-align: inherit;">Hủy</font></button>
+              </div>
+            </div>
+          </div>
+          <div class="box-body">
+            <table class="table table-bordered table-striped" id="example1">
+              <thead>
+                <tr>
+                  <th>Mã hóa đơn</th>
+                  <th>Ngày nhập</th>
+                  <th>Khách hàng</th>
+                  <th>Nhân viên</th>
+                  <th>Tổng tiền</th>
+                  <th>Sửa</th>
+                  <th>Xóa</th>
+                  <th>Xem chi tiết</th>
+                </tr>
+              </thead>
+              <tbody style="color: #169dab;">
+               <tr>
+                 <td>HD01</td>
+                 <td>22/01/2019</td>
+                 <td>Bui Tien Dat</td>
+                 <td>NV001</td>
+                 <td>90.000.000</td>
+                 <td><button type="submit" class="openCloseCart" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">Sửa</i></font>
+                </button>
+              </td>
+              <td><input type="button" value="Xóa" onclick="deleteRow(this)"  style="width: 45px; height: 40px;margin-left: 12px; background: #ff0000bd;color: black;font-weight: 700;vertical-align: inherit;">
+              </td>
+              <td>
+
+                <button type="submit" class="open" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">xem</font>
+
+                </i></td>
+              </tr>
+              <div class="dh">
+               <div id="cartItemsContainer3">
+                <i class="far fa-times-circle close" aria-hidden="true" style="color: black;">
+
+                </i>
+                <div class="tieude">
+                 <p>STT</p>
+                 <p>Mã sản phẩm</p>
+                 <p>Tên sản phẩm</p>
+                 <p>Số lượng</p>
+                 <p>Giá nhập</p>
+                 <p>Thành tiền</p>
+               </div>
+               <div class="stt">
+                 <p>1</p>
+                 <p style="padding-left: 45px;">SP07</p>
+                 <p style="padding-left: 54px;">Dưa hấu</p>
+                 <p style="padding-left: 45px;">5</p>
+                 <p style="padding-left: 22px;">35.000</p>
+                 <p>150.000</p>
+               </div>
+               <div class="stt">
+                 <p>2</p>
+                 <p style="padding-left: 45px;">SP09</p>
+                 <p style="padding-left: 54px;">Dưa lưới</p>
+                 <p style="padding-left: 45px;">4</p>
+                 <p style="padding-left: 22px;">85.000</p>
+                 <p>340.000</p>
+               </div>
+             </div>
+             <script>
+              $('.open').click(function () {
+                $('.dh').toggle();
+              });
+            </script>
+            <script type="text/javascript">
+             $('.close').click(function () {
+              $('.dh').toggle();
+            });
+          </script>
+            <tr>
+             <td>HD02</td>
+             <td>23/06/2019</td>
+             <td>Em Thắng</td>
+             <td>NV001</td>
+             <td>60.000.000</td>
+             <td><button type="submit" class="openCloseCart" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">Sửa</i></font>
+                </button>
+              </td>
+              <td><input type="button" value="Xóa" onclick="deleteRow(this)"  style="width: 45px; height: 40px;margin-left: 12px; background: #ff0000bd;color: black;font-weight: 700;vertical-align: inherit;">
+              </td>
+              <td>
+
+                <button type="submit" class="open2" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">xem</font>
+                  
+                </i></td>
+        </tr>
+        <div class="dh1">
+         <div id="cartItemsContainer3">
+          <i class="far fa-times-circle close1" aria-hidden="true" style="color: #2b7306;"></i>
+          <div class="tieude">
+           <p>STT</p>
+           <p>Mã sản phẩm</p>
+           <p>Tên sản phẩm</p>
+           <p>Số lượng</p>
+           <p>Đơn giá</p>
+           <p>Thành tiền</p>
+         </div>
+         <div class="stt">
+           <p>1</p>
+           <p style="padding-left: 45px;">SP04</p>
+           <p style="padding-left: 54px;">cherry</p>
+           <p style="padding-left: 45px;">2</p>
+           <p style="padding-left: 22px;">250.000</p>
+           <p>500.000</p>
+         </div>
+         <div class="stt">
+           <p>2</p>
+           <p style="padding-left: 45px;">SP02</p>
+           <p style="padding-left: 54px;">Cam đỏ</p>
+           <p style="padding-left: 45px;">10</p>
+           <p style="padding-left: 22px;">350.000</p>
+           <p>35.000.000</p>
+         </div>
+       </div>
+       <script>
+        $('.open1').click(function () {
+          $('.dh1').toggle();
+        });
+      </script>
+      <script type="text/javascript">
+       $('.close1').click(function () {
+        $('.dh1').toggle();
+      });
+    </script>
+        <tr>
+         <td>HD03</td>
+         <td>23/06/2019</td>
+         <td>Duyên Pibo</td>
+         <td>NV002</td>
+         <td>160.000.000</td>
+       <td><button type="submit" class="openCloseCart" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">Sửa</i></font>
+                </button>
+              </td>
+              <td><input type="button" value="Xóa" onclick="deleteRow(this)"  style="width: 45px; height: 40px;margin-left: 12px; background: #ff0000bd;color: black;font-weight: 700;vertical-align: inherit;">
+              </td>
+              <td>
+
+                <button type="submit" class="open2" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">xem</font>
+                  
+                </i></td>
+        </tr>
+        <div class="dh2">
+         <div id="cartItemsContainer3">
+          <i class="close2" aria-hidden="true" style="color: #2b7306;">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </i>
+          <div class="tieude">
+           <p>STT</p>
+           <p>Mã sản phẩm</p>
+           <p>Tên sản phẩm</p>
+           <p>Số lượng</p>
+           <p>Đơn giá</p>
+           <p>Thành tiền</p>
+         </div>
+         <div class="stt">
+           <p>1</p>
+           <p style="padding-left: 45px;">SP01</p>
+           <p style="padding-left: 54px;">Chôm chôm</p>
+           <p style="padding-left: 45px;">20</p>
+           <p style="padding-left: 22px;">800.000</p>
+           <p>160.000.000</p>
+         </div>
+       </div>
+       <script>
+        $('.open2').click(function () {
+          $('.dh2').toggle();
+        });
+      </script>
+      <script type="text/javascript">
+       $('.close2').click(function () {
+        $('.dh2').toggle();
+      });
+    </script>
+    <tr>
+     <td>HD04</td>
+     <td>20/07/2019</td>
+     <td>Bố Minh</td>
+     <td>NV004</td>
+     <td>80.000.000</td>
+   <td><button type="submit" class="openCloseCart" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">Sửa</i></font>
+                </button>
+              </td>
+              <td><input type="button" value="Xóa" onclick="deleteRow(this)"  style="width: 45px; height: 40px;margin-left: 12px; background: #ff0000bd;color: black;font-weight: 700;vertical-align: inherit;">
+              </td>
+              <td>
+
+                <button type="submit" class="open4" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">xem</font>
+                  
+                </i></td>
+        </tr>
+        <div class="dh3">
+         <div id="cartItemsContainer3">
+          <i class="far fa-times-circle close3" aria-hidden="true" style="color: #2b7306;"></i>
+          <div class="tieude">
+           <p>STT</p>
+           <p>Mã sản phẩm</p>
+           <p>Tên sản phẩm</p>
+           <p>Số lượng</p>
+           <p>Đơn giá</p>
+           <p>Thành tiền</p>
+         </div>
+         <div class="stt">
+           <p>1</p>
+           <p style="padding-left: 45px;">SP01</p>
+           <p style="padding-left: 54px;">Dâu tây</p>
+           <p style="padding-left: 45px;">25</p>
+           <p style="padding-left: 22px;">350.000</p>
+           <p>80.000.000</p>
+         </div>
+       </div>
+       <script>
+        $('.open3').click(function () {
+          $('.dh3').toggle();
+        });
+      </script>
+      <script type="text/javascript">
+       $('.close3').click(function () {
+        $('.dh3').toggle();
+      });
+    </script>
+<tr>
+ <td>HD05</td>
+ <td>04/05/2019</td>
+ <td>Mẹ Dung</td>
+ <td>NV001</td>
+ <td>260.000.000</td>
+  <td><button type="submit" class="openCloseCart" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">Sửa</i></font>
+                </button>
+              </td>
+              <td><input type="button" value="Xóa" onclick="deleteRow(this)"  style="width: 45px; height: 40px;margin-left: 12px; background: #ff0000bd;color: black;font-weight: 700;vertical-align: inherit;">
+              </td>
+              <td>
+
+                <button type="submit" class="open4" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">
+                  <font style="vertical-align: inherit;">xem</font>
+                  
+                </i></td>
+        </tr>
+        <div class="dh4">
+         <div id="cartItemsContainer3">
+          <i class="far fa-times-circle close4" aria-hidden="true" style="color: #2b7306;"></i>
+          <div class="tieude">
+           <p>STT</p>
+           <p>Mã sản phẩm</p>
+           <p>Tên sản phẩm</p>
+           <p>Số lượng</p>
+           <p>Đơn giá</p>
+           <p>Thành tiền</p>
+         </div>
+         <div class="stt">
+           <p>1</p>
+           <p style="padding-left: 45px;">SP01</p>
+           <p style="padding-left: 54px;">Nho xanh</p>
+           <p style="padding-left: 45px;">2</p>
+           <p style="padding-left: 22px;">150.000</p>
+           <p>300.000</p>
+         </div>
+         <div class="stt">
+           <p>2</p>
+           <p style="padding-left: 45px;">SP06</p>
+           <p style="padding-left: 54px;">dâu tây</p>
+           <p style="padding-left: 45px;">1</p>
+           <p style="padding-left: 22px;">180.000</p>
+           <p>180.000</p>
+         </div>
+         <div class="stt">
+           <p>3</p>
+           <p style="padding-left: 45px;">SP03</p>
+           <p style="padding-left: 54px;">Lê Hàn</p>
+           <p style="padding-left: 45px;">3</p>
+           <p style="padding-left: 22px;">50.000</p>
+           <p>150.000</p>
+         </div>
+       </div>
+       <script>
+        $('.open4').click(function () {
+          $('.dh4').toggle();
+        });
+      </script>
+      <script type="text/javascript">
+       $('.close4').click(function () {
+        $('.dh4').toggle();
+      });
+    </script>
+</tbody>
+</table>
+<script>
+
+  $('.addRow').click(function () {
+    $('#addRow1').toggle();
+  });
+</script>
+<script>
+
+  function addRow()
+  {
+                // get input values
+                var ma= document.getElementById('txtma1').value;
+                var nh=document.getElementById('txtnh1').value;
+                var ncc = document.getElementById('txtncc1').value;
+                var sl = document.getElementById('txtsl1').value;
+                var tt=document.getElementById('txtsl1').value;
+                  // get the html table
+                  // 0 = the first table
+                  var table = document.getElementsByTagName('table')[0];
+                  
+                  // add new empty row to the table
+                  // 0 = in the top 
+                  // table.rows.length = the end
+                  // table.rows.length/2+1 = the center
+                  var newRow = table.insertRow(table.rows.length);
+                  
+                  // add cells to the row
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+                  var cel4 = newRow.insertCell(3);
+                  var cel5 = newRow.insertCell(4);
+                  var cel6 = newRow.insertCell(5);
+                  var cel7 = newRow.insertCell(6);
+                  var cel8 = newRow.insertCell(7);
+                  // add values to the cells
+                  cel1.innerHTML = ma;
+                  cel2.innerHTML = nh;
+                  cel3.innerHTML = ncc;
+                  cel4.innerHTML=sl;
+                  cel5.innerHTML=tt;
+                  cel6.innerHTML ='<input type="button" value="Sửa" class="openCloseCart" style="width: 45px;height: 40px;background: pink;margin-left: 12px;color: black;font-weight: 700;">';
+                  cel7.innerHTML ='<input type="button" value="Xóa" onclick="deleteRow(this)"  style="width: 45px; height: 40px;margin-left: 12px; background: #ff0000bd;color: #fff;font-weight: 700;vertical-align: inherit;">';
+                   cel8.innerHTML ='<input type="button" value="xem" class="open"   style="width: 45px; height: 40px;margin-left: 12px; background: white;color: black;font-weight: 700;vertical-align: inherit;">';
+                }
+              </script>
+              <script>
+
+                $('.openCloseCart').click(function () {
+                  $('#shoppingCart').toggle();
+                });
+              </script>
+              <script> 
+
+            // get selected row
+            // display selected row data in text input
+            
+            var table = document.getElementById("example1"),rIndex;
+            
+            for(var i = 1; i < table.rows.length; i++)
+            {
+              table.rows[i].onclick = function()
+              {
+                rIndex = this.rowIndex;
+                console.log(rIndex);
+
+                document.getElementById("txtma").value = this.cells[0].innerHTML;
+                document.getElementById("txtnh").value = this.cells[1].innerHTML;
+                document.getElementById("txtncc").value = this.cells[2].innerHTML;
+                document.getElementById("txtsl").value = this.cells[3].innerHTML;
+                document.getElementById("txttt").value = this.cells[4].innerHTML;
+              };
+            }
+            
+           // edit the row
+           function editRow()
+           {
+            table.rows[rIndex].cells[0].innerHTML = document.getElementById("txtma").value;
+            table.rows[rIndex].cells[1].innerHTML = document.getElementById("txtnh").value;
+            table.rows[rIndex].cells[2].innerHTML = document.getElementById("txtncc").value;
+            table.rows[rIndex].cells[3].innerHTML = document.getElementById("txtsl").value;
+            table.rows[rIndex].cells[4].innerHTML = document.getElementById("txttt").value;
+          }
+        </script>    
+      </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+  </div>
+  <!-- /.col -->
+</div>
+<!-- /.row -->
+</section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.4.0
+            </div>
+            <strong>Copyright © 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+            reserved.
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li class="active"><a href="#control-sidebar-theme-demo-options-tab" data-toggle="tab"><i class="fa fa-wrench"></i></a></li>
+                <li class="active"><a href="#control-sidebar-theme-demo-options-tab" data-toggle="tab"><i class="fa fa-wrench"></i></a></li><li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 3 -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <!-- page script -->
+    <script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+    </script>
+
+
+
+</body></html>

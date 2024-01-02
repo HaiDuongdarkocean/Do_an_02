@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trái cây nhập khẩu</title>
+	<link rel="stylesheet" type="text/css" href="../style/index.css">
+	<link rel="stylesheet" type="text/css" href="../style/dmspNhapKhau.css">
+	<link rel="stylesheet" type="text/css" href="../style/ctsptao.css">
+	<link rel="stylesheet" type="text/css" href="../style/aboutUS.css">
+	<link rel="stylesheet" type="text/css" href="../style/blog.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery-3.2.1.min.js" type="text/javascript" ></script>
+	<script src="java.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="shortcut icon" type="image/png" href="../Media/img/dat.jpg"/>
+</head>
+<body>
+	<div id="NhapKhauAll">
+			<!-- đây là phần top-->
+		<div id="topdau">
+			<div class="od1">
+				<div class="tieude" align="center">
+					<div id="myNav" class="overlay">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<div class="overlay-content">
+							<a href="../src/index.html">Trang chủ</a>
+							<a href="../src/dmspNhapkhau.html">Sản phẩm</a>
+							<a href="../src/aboutUs.html">Giới thiệu</a>
+							
+							<a href="../src/blog.html">Blog</a>
+							<a href="../src/Lienhe.html">Liên hệ</a>
+						</div>
+					</div>
+
+
+					<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; Welcome to Fuji Online Shopping Store !</span>
+
+					<script>
+						function openNav() {
+							document.getElementById("myNav").style.width = "100%";
+						}
+
+						function closeNav() {
+							document.getElementById("myNav").style.width = "0%";
+						}
+					</script>
+				</div>
+			</div>
+			<div class="od2"> 
+				<div class="dangnhap">
+					<button class="buttonDangNhap" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập
+					</button>
+
+					<div id="id01" class="modal">
+
+						<form class="modal-content animate" action="/src/index.html">
+							<div class="imgcontainer">
+								<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;
+								</span>
+								<img src="../Media/img/dat.jpg" alt="Avatar" class="avatarDangNhap">
+							</div>
+
+							<div class="container">
+								<label for="uname"><b>Username</b></label>
+								<input class="inpputDNtext" type="text" placeholder="Enter Username" name="uname" required>
+
+								<label for="psw"><b>Password</b></label>
+								<input class="inpputDNpasword" type="password" placeholder="Enter Password" name="psw" required>
+
+								<button type="submit" class="buttonlogin">Login</button>
+								<label>
+									<input type="checkbox" checked="checked" name="remember"> Remember me
+								</label>
+							</div>
+
+							<div class="container" style="background-color:#f1f1f1">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#">password?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<script>
+                      // Get the modal
+                      var modal = document.getElementById('id01');
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                            	if (event.target == modal) {
+                            		modal.style.display = "none";
+                            	}
+                            }
+                        </script>
+                </div>
+                <div class="dangki">
+                	<a href="../src/dangki.html">
+                	<button class="buttonDangKi" style="width:auto;">Đăng Kí
+					</button></a>
+
+                </div>
+
+             
+			</div>
+		</div>
+
+		<!-- đây là phầm header tìm kiếm, giỏ hàng -->
+		<div class="dautrang">
+			<div id="header">
+				<div class="headerTKiem" >
+					<div id="seach-box">
+						<form>
+							<input class="inputTkiem" type="text" name="search" placeholder="Tìm kiếm hoa quả..">
+						</form>
+						<i class="fa fa-search" aria-hidden="true" ></i>
+					</div>
+				</div>
+				<div class="headerLogo">
+					
+					<a href="../src/index.html"><img src="../Media/img/logofuji.png" class="logojuji" style="border-radius: 50%;border: 3px solid #ff9600;width: 120px; margin-top: 10px" ></a>
+				</div>
+				<div style="float: right; width: 250px; height: 60px; margin: 65px 0 0 35px; ">
+					<a href="Lienhe.html" class="hotlinea"><i class="fa fa-phone" aria-hidden="true"></i>
+						Hotline:0961394881
+					</a>
+					<a href="../src/giohang.html">
+						<div id="giohang">
+
+							<img src="../Media/img/cart.png">
+
+						</div>
+						<p class="sosp">
+							9
+						</p>
+					</a>
+				</div>
+			</div>
+
+			<!-- đây là phần div menu -->
+			<br>
+			<div class="menudau">
+				<div class="navbar">
+					<a href="../src/index.html"><i class="fa fa-home" aria-hidden="true" style="color: red" ></i><b>    Trang chủ</b></a>
+
+					<div class="dropdown">
+						<button class="dropbtn"><b>Sản phẩm</b> 
+							<i class="fa fa-caret-down" style="color: red" ></i>
+						</button>
+						<div class="dropdown-content" align="center">
+							<div class="MegaMenu">
+
+								<div class="row">
+									<div class="column">
+										<h3><a href="">Trái cây nhập khẩu</a></h3>
+										<a href="#" >Nho xanh Úc</a>
+										<a href="#">Kiwi NL</a>
+										<a href="#">Lựu Isarel</a>
+										<a href="#">Lê Hàn Quốc</a>
+										
+									</div>
+									<div class="column">
+										<h3><a href="">Trái cây vùng miềm</a></h3>
+										<a href="#">Bưởi da xanh</a>
+										<a href="#">Dưa lưới</a>
+										<a href="#">Cam xoàn</a>
+										<a href="#">Xoài cát</a>
+
+									</div>
+									<div class="column">
+										<h3><a href="">Trái cây dinh dưỡng</a></h3>
+										<a href="#">Kiwi vàng NzL</a>
+										<a href="#">Táo Rockit</a>
+										<a href="#">Việt quất Peru</a>
+										<a href="#">Nho đen Úc</a>
+
+									</div>
+									<div class="column">
+										<h3><a href="">Rau củ quả tươi </a></h3>
+										<a href="#">Củ cải</a>
+										<a href="#">Ớt sapa</a>
+										<a href="#">Cà chua Mĩ</a>
+										<a href="#">Nho đen Úc</a>
+										
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> 
+
+					
+
+					<a href="../src/aboutUs.html"><b>Giới thiệu</b></a>
+					
+					
+					
+					<a href="../src/blog.html"><b>Blog </b></a>
+					<a href="../src/Lienhe.html"><b>Liên hệ</b></a>
+			</div>
+		</div>
+
+
+		<!-- đây là phần banner-->
+		<div class="banner_nhapKhau">
+			<div class="spnoibat_nhapkhau">
+				<div id="bnerDuobannerNhapkhau_spnb">
+					<div id="bnerDuoi_spnb_spnb">
+						<div id="bnerDuoi1">
+							<div id="bnerAnh_spnb">
+								<a href="#">
+									<img src="../Media/img/banner4.jpg">
+								</a>
+							</div>
+						</div>
+					</div>
+					<h2 class="bn_p2_spnb1">
+						<b>Trái cây nhập khẩu</b>
+					</h2>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--  ===================== ĐÂY LÀ PHẦN THÂN DANH MỤC SẢN PHẨM======================== --><br><br>
+		<div class="tranggiuaNhapKhau">
+			<div class="dmspNK_trai">
+
+				<input type="text" id="dmspNK_tkiem" onkeyup="myFunctionTimKiem()" placeholder=" Search for names.." title="Type in a name">
+				<table id="tableDMSP">
+
+					<tr>
+						<td style="width:85%;" ><a href="dmspNhapKhau.html" class="dmsp_ten" >Trái cây nhập khẩu</a></td>
+						<td style="width:15%;" class="dmsp_slg">(24)</td>
+					</tr>
+					<tr>
+						<td ><a href="" class="dmsp_ten">Trái cay vùng miền</a></td>
+						<td class="dmsp_slg">(15)</td>
+					</tr>
+					<tr>
+						<td ><a href="" class="dmsp_ten">Trái cây dinh dưỡng</a></td>
+						<td class="dmsp_slg">(17)</td>
+					</tr>
+					<tr>
+						<td ><a href="" class="dmsp_ten">Rau củ, quả khác</a></td>
+						<td class="dmsp_slg">(15)</td>
+					</tr>
+					<tr>
+						<td  ><a href="" class="dmsp_ten">Nho</a></td>
+						<td class="dmsp_slg">(8)</td>
+					</tr>
+					<tr>
+						<td ><a href="" class="dmsp_ten">Táo</a></td>
+						<td class="dmsp_slg">(9)</td>
+					</tr>
+					<tr>
+						<td ><a href="" class="dmsp_ten">Lê</a></td>
+						<td class="dmsp_slg">(7)</td>
+					</tr>
+					<tr>
+						<td ><a href="" class="dmsp_ten">Cam</a></td>
+						<td class="dmsp_slg">(5)</td>
+					</tr>
+				</table>
+				<script>
+					function myFunctionTimKiem() {
+						var input, filter, table, tr, td, i, txtValue;
+						input = document.getElementById("dmspNK_tkiem");
+						filter = input.value.toUpperCase();
+						table = document.getElementById("tableDMSP");
+						tr = table.getElementsByTagName("tr");
+						for (i = 0; i < tr.length; i++) {
+							td = tr[i].getElementsByTagName("td")[0];
+							if (td) {
+								txtValue = td.textContent || td.innerText;
+								if (txtValue.toUpperCase().indexOf(filter) > -1) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}       
+						}
+					}
+				</script>
+				<br>
+				<br>
+
+
+
+				<div class="tkiemtheoThe">
+					<p class="ctsp_banchay_tkkg">Tìm kiếm theo khoảng giá</p>
+					<div class="tkiemtheoThe_p">
+						<a href="">30-50k</a> &nbsp;&nbsp;
+						<a href="">50-100k</a>&nbsp;&nbsp;
+						<a href="">100-200k</a>&nbsp;&nbsp;
+						<a href="">200-300k</a>&nbsp;&nbsp;
+						<a href="">300-500k</a>&nbsp;&nbsp;
+						<a href="">500-1000k</a> 
+					</div> 
+
+				</div>
+
+
+
+
+				<div class="Tin_tuc_moi_dmsp">
+					<p class="ctsp_banchay">Tin tức mới</p>
+					<div class="tt1">
+						<div class="bc_img">
+							<img src="../Media/img/tt4.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+						</div>
+						<div class="tt_cap">
+							<h4><a href="../src/ctblog6.html">
+							Những trái cây có nước ép ngon tuyệt !</a></h4>
+
+						</div>
+						<p>
+							Mới chớm hè mà nắng nóng oi bức, cơ thể uể oải, thiếu nước, thiếu khoáng. Do đó cần phải bổ sung ngay dinh dưỡng cho cơ thể!
+						</p>
+					</div>
+					<div class="tt1">
+						<div class="bc_img">
+							<img src="../Media/img/tt1.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+						</div>
+						<div class="tt_cap">
+							<h4><a href="../src/ctblog5.html">Cảm cúm nên ăn gì cho nhanh khỏi</a></h4>
+
+						</div>
+						<p>
+							Thời tiết giao mùa, nắng mưa thất thường dẫn đến cơ thể dễ bị virus xâm nhập và hệ miễn dịch bị suy yếu. Các bệnh...
+						</p>
+					</div>
+					<div class="tt1">
+						<div class="bc_img">
+							<img src="../Media/img/tt3.jpg"  alt="" style="width: 100%; height: 100%; object-fit: cover;">
+						</div>
+						<div class="tt_cap">
+							<h4><a href="../src/ctblog3.html">7 loại trái cây đánh bay độc tố trong cơ thể</a></h4>
+
+						</div>
+						<p>
+							Thời tiết giao mùa, nắng mưa thất thường dẫn đến cơ thể dễ bị virus xâm nhập và hệ miễn dịch bị suy ...
+						</p>
+					</div>
+
+				</div>
+
+
+
+				
+			</div>
+
+
+
+
+			<div class="dmspNK_phai">
+				<div class="dmspNK_sosp_chuyen">
+					<div class="dmspNK_sosp"> 1-24 sản phẩm</div>
+
+				</div>
+			
+
+				<div class="dmspNK_hang">
+
+					<div class="spbcnk1">
+						<a href="../src/camvang.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/cv1.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/cv2.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/camvang.html"><b>Cam vàng</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Úc</p>
+							<p class="spbcnk1_gia">Giá: 99<sup>đ</sup>/kg</p>
+							<a href="../src/camvang.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+
+					<div class="spbcnk1">
+						<a href="../src/bosap.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/bs1.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/bs2.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/bosap.html"><b>Bơ sáp</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Ai Cập</p>
+							<p class="spbcnk1_gia">Giá: 109<sup>đ</sup>/kg</p>
+							<a href="../src/bosap.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+
+					<div class="spbcnk1">
+						<a href="../src/kiwixanh.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/kw5.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/kw6.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/kiwixanh.html"><b>Kiwi xanh</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Newzealand</p>
+							<p class="spbcnk1_gia">Giá: 89<sup>đ</sup>/kg</p>
+							<a href="../src/kiwixanh.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="dmspNK_hang">
+
+					<div class="spbcnk1">
+						<a href="../src/dautay.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/dt14.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/dt11.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/dautay.html"><b>Dâu tây</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Australia</p>
+							<p class="spbcnk1_gia">Giá: 799<sup>đ</sup>/kg</p>
+							<a href="../src/dautay.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+
+					<div class="spbcnk1">
+						<a href="../src/vietquat.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/vq5.png" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/vq3.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/vietquat.html"><b>Việt Quất</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Peru</p>
+							<p class="spbcnk1_gia">Giá: 999<sup>đ</sup>/kg</p>
+							<a href="../src/vietquat.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+
+					<div class="spbcnk1">
+						<a href="../src/dualevang.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/dlv1.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/dlv2.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/dualevang.html"><b>Dưa lê vàng</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Hàn Quốc</p>
+							<p class="spbcnk1_gia">Giá: 599<sup>đ</sup>/kg</p>
+							<a href="../src/dualevang.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="dmspNK_hang">
+
+					<div class="spbcnk1">
+						<a href="../src/luu.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/l1.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/l2.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/luu.html"><b>Lựu</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Nam Phi</p>
+							<p class="spbcnk1_gia">Giá: 399<sup>đ</sup>/kg</p>
+							<a href="../src/luu.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+					
+					<div class="spbcnk1">
+						<a href="../src/kiwivang.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/kw1.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/kw2.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/kiwivang.html"><b>Kiwi vàng</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Peru</p>
+							<p class="spbcnk1_gia">Giá: 999<sup>đ</sup>/kg</p>
+							<a href="../src/kiwivang.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+
+					<div class="spbcnk1">
+						<a href="../src/ctsptao.html">
+							<div class="spbcnk1_tren">
+								<div class="spbcanhhover">
+									<div class="spbcanhhover-inner">
+										<div class="spbcanhhover-tren">
+											<img src="../Media/img/t2.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+										<div class="spbcanhhover-duoi">
+											<img src="../Media/img/t3.jpg" width="100%" height="100%" style="object-fit: cover;" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="spbcnk1_duoi">
+							<br>
+							<p class="spbcnk1_ten"><a href="../src/ctsptao.html"><b>Táo</b></a></p>
+							<p class="spbcnk1_xx">Xuất xứ: Mĩ</p>
+							<p class="spbcnk1_gia">Giá: 249<sup>đ</sup>/kg</p>
+							<a href="../src/ctsptao.html"> <p class="spbcnk1_btnMua">Mua ngay</p></a>
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<script>
+					function myFunctionTimKiemTongquat() {
+						var input, filter, dmspNK_hang, spbcnk1, spbcnk1_ten, i, txtValue;
+						input = document.getElementById("dmspNK_tkiem");
+						filter = input.value.toUpperCase();
+						dmspNK_hang = document.getElementById("dmspNK_hang");
+						spbcnk1 = dmspNK_hang.getElementsByClassName("spbcnk1");
+						for (i = 0; i < spbcnk1.length; i++) {
+							spbcnk1_ten = spbcnk1[i].getElementsByClassName("spbcnk1_ten")[0];
+							if (spbcnk1_ten) {
+								txtValue = spbcnk1_ten.textContent || spbcnk1_ten.innerText;
+								if (txtValue.toUpperCase().indexOf(filter) > -1) {
+									spbcnk1[i].style.display = "inline-block";
+								} else {
+									spbcnk1[i].style.display = "none";
+								}
+							}       
+						}
+					}
+				</script>
+
+			</div>
+
+			<div class="blog_chuyentrang">
+				<ul >
+					<li>
+						<a href="../src/dmspNhapKhau2.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</li>					
+					<li><a href="../src/dmspNhapKhau.html">1</a></li>
+					<li><a href="../src/dmspNhapKhau2.html">2</a>  </li>
+					<li><a href="../src/dmspNhapKhau3.html">3</a>  </li>
+					
+					
+				</ul>
+				
+			</div>
+			
+
+		</div>
+
+		</div>
+
+
+
+
+		  <!-- đây là cuối trang-->
+         <img src="../Media/img/fotter.PNG" alt="" class="futter">		
+         <div class="cuoitrang">
+         	<div class="chan1">
+         		<div class="chan1-newlette">
+         			<p> <i class="fa fa-envelope" aria-hidden="true" style=" color: white"></i>&nbsp;Bản tin</p>
+         		</div>
+         		<div class="chan1-giua">
+         			<p>Đăng ký nhận lời khuyên, tin tức và khuyến mại</p>
+         		</div>
+
+         		<div class="chan1-email">
+         			<input type="text" placeholder="Địa chỉ email của bạn..." name="">
+         			<a href="../src/index.html">&nbsp;<button type="">Đăng ký</button></a>
+         		</div>
+         	</div>
+         	<div class="chan2">
+         		
+         		<div class="chan2-1">
+         			<div class="chan2-1-1">
+         				<div class="chan2-1-1-tren">
+         					<br><br>
+         					<div class="chan2-about">
+         						<h3 style="color: white">&nbsp;&nbsp;VỀ CHÚNG TÔI</h3>
+         						<img src="../Media/img/ab1.png" alt="">
+         						<br><br>
+         						<p class="chan2-about-p">&nbsp; Sản phẩm của chúng tôi được thu hoạch mới, rửa sẵn cho hộp và cuối cùng [...]</p>
+         					</div>
+
+
+         					<div id="chan2-thongtin">
+         						<br>
+         						<h3 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THÔNG TIN</h3>
+         						<ul>
+         							<li><a href=" ">Chính sách mua hàng</a></li>
+         							<li><a href="">Chính sách đổi trả</a></li>
+         							<li><a href="">Phương thức thanh toán</a></li>
+         							<li><a href="">Đánh giá</a></li>
+         							<li><a href="">Liên hệ chúng tôi</a></li>
+         						</ul>
+         					</div>
+         					<div id="chan2-vechungtoi">
+         						<h3 style="color: white">CÔNG TY CP XUẤT NHẬP KHẨU FUJIi</h3>
+         						<p style="color: #999">
+         							<i class="fa fa-home" aria-hidden="true"></i>&nbsp;
+         							Trụ sở: Số nhà 24 D7, KĐT Đại Kim - Định Công, P.Đại Kim, Q.Hoàng Mai, TP.HN
+         						</p>
+         						<p style="color: #999"><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;&nbsp;Điện thoại: 0989.96.69.96 - 0988 444 123</p>
+         						<p style="color: #999"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Website: www.hoaquafuji.com</p>
+         						<p style="color: #999">Để đăng ký sản phẩm và yêu cầu chung xin vui lòng liên hệ với chúng tôi</p>
+         						<p style="color: #999">Trân thành cảm ơn !</p>
+         					</div>
+         				</div>
+         				
+
+         			</div>
+         		</div>
+         		<div class="chan2-2">
+         			<div class="byYen">
+         				<div class="chan2-2-trai">
+         					<p>© 2019 Hệ thống hoa quả sạch Fuji Fruit by: <a href="" class="yen" >Bui Tien Dat</a></p>
+         				</div>
+         				<div class="chan2-2-phai">
+         					<p>Follow us
+         						<a href="#" class="fa fa-facebook" style="width: 40px; height: 40px;
+         						border-radius: 100%;
+         						background: #3B5998;
+         						color: #fff;
+         						line-height: 40px;
+         						text-align: center;
+         						font-size: 18px;"></a>
+         						<a href="#" class="fa fa-google" style="width: 40px; height: 40px;
+         						border-radius: 100%;
+         						background: #dd4b39;
+         						color: #fff;
+         						line-height: 40px;
+         						text-align: center;
+         						font-size: 18px;"></a>
+         						<a href="#" class="fa fa-twitter" style="width: 40px; height: 40px;
+         						border-radius: 100%;
+         						background: #55ACEE;
+         						color: #fff;
+         						line-height: 40px;
+         						text-align: center;
+         						font-size: 18px;"></a>
+         						<a href="#" class="fa fa-youtube" style="width: 40px; height: 40px;
+         						border-radius: 100%;
+         						background: #bb0000;
+         						color: #fff;
+         						line-height: 40px;
+         						text-align: center;
+         						font-size: 18px;"></a>
+         						<a href="#" class="fa fa-instagram" style="width: 40px; height: 40px;
+         						border-radius: 100%;
+         						background:  #125688;
+         						color: #fff;
+         						line-height: 40px;
+         						text-align: center;
+         						font-size: 18px;"></a>
+
+         					</p>
+         				</div>
+         			</div>
+         		</div>
+         	</div>
+         </div>
+
+
+
+         <div id="chan2-icon">
+         	<ul class="chan2-ul">
+         		<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-facebook-official" aria-hidden="true" style="color:#3B5998 "></i>&nbsp;&nbsp;&nbsp;Facebook</a></li>
+         		<li class="chan2-li"><a href="#">&nbsp;&nbsp<i class="fa fa-phone-square" aria-hidden="true" style="color: #00a65a"></i>&nbsp;&nbsp;&nbsp;Tư vấn</a></li>
+         		<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-google-plus-square" aria-hidden="true" style="color: #bb0000"></i>&nbsp;&nbsp;&nbsp;Gmail</a></li>
+
+         		<li class="chan2-li"><a href="#">&nbsp;&nbsp;<i class="fa fa-twitter-square" aria-hidden="true" style="color: #55ACEE"></i>&nbsp;&nbsp;&nbsp;Twitter</a></li>
+         	</ul>
+         </div>
+
+
+
+
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <div align="center">
+    <img src="Image/admin.png" alt="" style=" height:200px">
+    <h2>Đăng nhập vào tài khoản của admin</h2>
+    <form autocomplete="on" action="index.html">
+      <table>
+        <tr>
+          <td>Tên tài khoản</td>
+        </tr>
+        <tr>
+          <td><input type="email"  id="txtTaikhoan" placeholder="Mời bạn nhập tên tài khoản" name="" autofocus  required autocomplete="off" size="70" style="line-height: 30px;"></td>
+        </tr>
+        <tr>
+          <td >Mật khẩu:</td>
+        </tr>
+        <tr>
+          <td><input type="password" id="txtMK" placeh older="Mời bạn nhập Mật khẩu" name="" required size="70" style="line-height: 30px;"></td>
+        </tr>
+        
+      </table>
+
+      <label><input type="checkbox" name="remember" checked="true">Ghi nhớ</label>&nbsp;&nbsp;&nbsp;<a href="#" style="text-decoration: none;">Quên mật khẩu</a><br>
+      
+        <input type="button" name="" value="Đăng nhập"  style="width: 180px;height: 40px; background-color: #F97407; margin-top: 10px;" id="btnLogin" href="index.html">
+    </form>
+    <script>
+      $(document).ready(function() {
+        $('#btnLogin').click(function(event){
+          var a = txtTaikhoan.value;
+          var b = txtMK.value;
+          var e = 0;
+          if (a == "dat4" && b == "123")
+          {
+            window.location = "index.html";
+            alert("Đăng nhập thành công");
+            e = 1;
+          }
+         
+          if(e==0){
+            alert("Đăng nhập sai vui lòng nhập lại");
+          }
+        });
+      });
+    </script>
+  </div>
+</body>
+</html>

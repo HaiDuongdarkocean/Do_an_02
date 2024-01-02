@@ -1,0 +1,268 @@
+#aboutus_giua {
+  width: 1200px;
+  margin: auto;
+  height: 640px;
+  background-color: white;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+
+}
+
+.abtrai {
+  height: 500px;
+  width: 400px;
+  float: left;
+}
+
+.ykienkh {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 418px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  height: 132px;
+}
+
+.active_ykkh,
+.ykienkh:hover {
+  background-color: #ccc;
+}
+
+.ykkhp {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  width: 350px;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column1 {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column1 .columnanh {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column1 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column1 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+.abphai {
+  width: 800px;
+  height: 500px;
+  float: right;
+  background-color: white;
+}
+
+.abphai_traitim {
+  padding: 98px 53px 101px;
+  text-align: center;
+  margin-left: -178px;
+  margin-top: -10px;
+  max-width: 100%;
+}
+
+.abphai_the_p {
+  background: transparent url(../Media/img/51.png) no-repeat center center / 100% 100%;
+}
+
+.abphai_the_p {
+  padding: 151px 73px 157px;
+  text-align: center;
+  margin-left: 347px;
+  margin-top: -427px;
+  position: relative;
+}
+
+.abphai_the_p .abphai_the_p_the_p {
+  font-size: 16px;
+}
+
+.abphai_the_p_the_p {
+  color: #555;
+  margin: 0;
+  line-height: 17px;
+  position: absolute;
+  margin-top: -94px;
+  margin-left: -62px;
+}
+
+
+
+
+/* Dòng thời gian thực tế (thước dọc)*/
+.MocThoiGian {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Dòng thời gian thực tế (thước dọc) */
+.MocThoiGian::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* NoiDung_moctgian xung quanh nội dung */
+.NoiDung_moctgian {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Các vòng tròn trên dòng thời gian */
+.NoiDung_moctgian::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #333;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Đặt NoiDung_moctgian bên trái*/
+.left {
+  left: 0;
+}
+
+/* Đặt NoiDung_moctgian bên phải */
+.right {
+  left: 50%;
+}
+
+/* Thêm mũi tên vào thùng chứa bên trái (chỉ bên phải) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #333;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #00a65a;
+}
+
+/* Thêm mũi tên vào thùng chứa bên phải (chỉ sang trái) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #333;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #00a65a transparent transparent;
+}
+
+/* Sửa vòng tròn cho NoiDung_moctgian ở phía bên phải */
+.right::after {
+  left: -16px;
+}
+
+/* Nội dung thực tế */
+.moctgian_p {
+  padding: 20px 30px;
+  background-color: #00a65a;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Truy vấn phương tiện - Dòng thời gian đáp ứng trên màn hình rộng dưới 600px*/
+@media screen and (max-width: 600px) {
+
+  /* Place the timelime to the left */
+  .MocThoiGian::after {
+    left: 31px;
+  }
+
+  /* NoiDung_moctgian chiều rộng đầy đủ */
+  .NoiDung_moctgian {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Đảm bảo rằng tất cả các mũi tên đang chỉ sang trái */
+  .NoiDung_moctgian::before {
+    left: 60px;
+    border: medium solid #333;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #333 transparent transparent;
+  }
+
+  /* Đảm bảo tất cả các vòng tròn ở cùng một điểm */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Làm cho tất cả các NoiDung_moctgian bên phải hoạt động giống như các NoiDung_moctgian bên trái */
+  .right {
+    left: 0%;
+  }
+}
+
+.cacmocsukien {
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+}

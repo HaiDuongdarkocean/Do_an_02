@@ -1,0 +1,70 @@
+table {
+    margin-left: 80px;
+}
+
+#thanDangki {
+    width: 1200px;
+    height: 1200px;
+    margin: auto;
+    border: 1px solid #999;
+}
+
+h3 {
+    margin-left: 50px;
+}
+
+h4 {
+    margin-left: 250px;
+    color: #838c8c
+}
+
+.dki-input {
+    width: 700px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 15PX;
+    color: #838c8c;
+    text-align: start;
+    margin-left: 35px;
+    padding-left: 10px;
+
+}
+
+.dki-mk {
+    width: 700px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 15PX;
+    color: #838c8c;
+    text-align: start;
+    margin-left: 35px;
+    padding-left: 10px;
+
+}
+
+input[type=radio] {
+    margin-left: 35px;
+}
+
+.dki-btn {
+    background-color: #00a65a;
+    border-radius: 15px;
+    width: 140px;
+    height: 40px;
+}
+
+.dki-btn:hover {
+    background-color: #fc0
+}
+
+
+.dki-slect {
+    width: 700px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 15PX;
+    color: #838c8c;
+    text-align: start;
+    margin-left: 35px;
+    padding-left: 10px;
+}

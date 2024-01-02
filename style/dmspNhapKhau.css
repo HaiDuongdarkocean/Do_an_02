@@ -1,0 +1,372 @@
+/*================
+========= đây là phân babner*=======*/
+
+/* Đây là phần sản phẩm nổi bật*/
+.spnoibat {
+  width: 1200px;
+  height: 1200px;
+  margin: auto;
+  background-color: pink;
+  position: relative;
+}
+
+.spnoibat_nhapkhau {
+  width: 1200px;
+  height: 400px;
+  margin: auto;
+  background-color: red;
+}
+
+/* đây là hover ảnh đường kẻ*/
+#bnerDuobannerNhapkhau_spnb {
+  position: relative;
+
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: white;
+}
+
+#bnerDuobannerNhapkhau_spnb:hover a img {
+  transform: scale(1.15);
+  transition: 1.5s;
+}
+
+#bnerDuobannerNhapkhau_spnb a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index:1;*/
+  width: 100%;
+  height: 400px;
+}
+
+#bnerDuobannerNhapkhau_spnb:before {
+  /*duong thang trai*/
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 2px;
+  height: 380px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: 1;
+}
+
+#bnerDuobannerNhapkhau_spnb #bnerDuoi_spnb_spnb:before {
+  /*duong thang phai*/
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 1170px;
+  width: 2px;
+  height: 380px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: 1;
+}
+
+#bnerDuobannerNhapkhau_spnb #bnerAnh_spnb:before {
+  /*duong thang tren*/
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 1.2%;
+  width: 97.5%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: 1;
+}
+
+#bnerDuobannerNhapkhau_spnb #bnerDuoi1:before {
+  /*duong thang duoi*/
+  content: '';
+  position: absolute;
+  top: 368px;
+  left: 1.2%;
+  width: 97.5%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  transform: scale(0);
+  z-index: 1;
+}
+
+#bnerDuobannerNhapkhau_spnb:hover:before,
+#bnerDuobannerNhapkhau_spnb:hover #bnerDuoi_spnb_spnb:before,
+#bnerDuobannerNhapkhau_spnb:hover #bnerAnh_spnb:before,
+#bnerDuobannerNhapkhau_spnb:hover #bnerDuoi1:before {
+  transform: scale(1);
+}
+
+.bn_p1_spnb {
+  color: #00a65a;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 115px;
+  padding-left: 70px;
+}
+
+.bn_p2_spnb1 {
+  color: #00a65a;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 350px;
+  padding-left: 70px;
+}
+
+
+/*===========PHẦN THÂN===========
+===============================*/
+
+.tranggiuaNhapKhau {
+  width: 1200px;
+  margin: auto;
+  height: 1685px;
+  /*  background-color: pink ;*/
+
+}
+
+
+/* ==== danh mục sản phẩm bên trái====*/
+.dmspNK_trai {
+  width: 300px;
+  height: 1550px;
+  float: left;
+  border-right: 1px solid #ddd;
+  /*  background-color: red ;*/
+}
+
+/* phần tìm kiếm*/
+#dmspNK_tkiem {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 295px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 50px;
+}
+
+#tableDMSP {
+  border-collapse: collapse;
+  width: 298px;
+
+  font-size: 18px;
+}
+
+#tableDMSP th,
+#tableDMSP td {
+  text-align: left;
+  padding: 12px;
+}
+
+#tableDMSP tr {
+  border-bottom: 1px dashed #e5e5e5;
+}
+
+#tableDMSP tr.header,
+#tableDMSP tr:hover {
+  background-color: #f1f1f1;
+}
+
+.dmsp_slg {
+  color: #00a65a;
+  text-align: right;
+}
+
+#tableDMSP .dmsp_ten {
+  color: #555;
+  text-decoration: none;
+}
+
+#tableDMSP .dmsp_ten:hover {
+  color: #00a65a;
+  text-decoration: none;
+}
+
+.Tin_tuc_moi_dmsp {
+  width: 295px;
+  height: 699px;
+  background-color: white;
+}
+
+.dmspNK_trai .tkiemtheoThe .tkiemtheoThe_p a {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+  border-radius: 15px;
+  background: #fafcfc;
+  color: #555555;
+  font-size: 14px !important;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  /* width: 120px;
+  height: 40px;*/
+  /*color: #999;
+  
+  margin-right: 0px;*/
+
+
+}
+
+.dmspNK_trai .tkiemtheoThe .tkiemtheoThe_p a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  background-color: #00a65a;
+  color: white;
+
+  /*background-color: #66cc66;
+  color: white;
+  border: 1px solid yellow;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50px;
+   width: 100px;
+  height: 40px;
+  line-height: 40px;*/
+}
+
+.dmspNK_trai .tkiemtheoThe a:hover {
+  text-decoration: none;
+}
+
+.ctsp_banchay_tkkg {
+
+  width: 293px;
+  height: 50px;
+  color: black;
+  text-align: center;
+  line-height: 105px;
+  font-family: 'Itim', cursive;
+  font-size: 22px;
+}
+
+
+/* DMSP bên phải======*/
+.dmspNK_phai {
+  width: 900px;
+  height: 1568px;
+  float: right;
+  background-color: white;
+}
+
+.dmspNK_sosp_chuyen {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+
+.dmspNK_sosp {
+  float: left;
+  color: #555;
+  margin: 15px 0 0 72px;
+
+}
+
+.dmspNK_chuyen_ngag {
+  float: right;
+}
+
+.dmspNK_hang {
+  height: 500px;
+  width: 100%;
+  background-color: white;
+}
+
+.dmspNK_cot {
+  width: 33.333%;
+  height: 100%;
+  background-color: bisque;
+  float: left;
+  border: 1px solid black;
+}
+
+.dmspNK_cot_c1 {
+  width: 90%;
+  height: 93%;
+  margin: 15px 0 0 15px;
+  background-color: red;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.dmspNK_c1_anh {
+  width: 247.5px;
+  height: 247.5px;
+  background-color: white;
+  text-align: center;
+  margin: 10.34px 0 0 10.34px;
+}
+
+.dmspNK_c1_p {
+  width: 247.5px;
+  height: 175px;
+  margin: 10.34px 0 0 10.34px;
+  background-color: white;
+}
+
+.dmspNK_cot .dmspNK_cot_c1 .dmspNK_c1_anh img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*==============================
+======= PHẦN CHUYỂN TRANG==========*/
+.blog_chuyentrang {
+  width: 638px;
+  float: right;
+  height: 70px;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.blog_chuyentrang ul li {
+  list-style-type: none;
+}
+
+.blog_chuyentrang ul li {
+  display: inline;
+}
+
+.blog_chuyentrang ul a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  background: white;
+  color: #00a65a;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid #00a65a;
+  border-radius: 50%;
+}
+
+.blog_chuyentrang ul a:hover {
+  background-color: #00a65a;
+  color: white;
+  border: 1px solid yellow;
+}
+
+.li1 {
+  background-color: #00a65a;
+  color: white;
+}

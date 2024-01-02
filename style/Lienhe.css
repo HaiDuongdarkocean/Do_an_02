@@ -1,0 +1,127 @@
+ .vitri .diachicuthe {
+   font-family: 'Asul'
+ }
+
+ h2 {
+   font-family: 'Asul';
+   font-size: 40px;
+ }
+
+ hr {
+   width: 1000px;
+   text-align: center;
+
+ }
+
+ #vitri {
+   width: 1200px;
+   height: 400px;
+   margin: auto;
+   margin-top: 30px;
+ }
+
+ iframe {
+   width: 1200px;
+   height: 400px;
+   margin: auto;
+
+ }
+
+ .diachicuthe {
+   width: 900px;
+   height: 350px;
+   margin: auto;
+ }
+
+ .diachicuthe_trai {
+   width: 340px;
+   height: 350px;
+   float: left;
+
+ }
+
+ .diachicuthe_logo {
+   text-align: center;
+   margin-left: 110px;
+   margin-top: 50px;
+
+ }
+
+ .diachicuthe_phai {
+   width: 450px;
+   height: 350px;
+   margin-top: -46px;
+   float: left;
+   margin-left: 76px;
+
+
+ }
+
+ .formlienhe input[type=text],
+ select,
+ textarea {
+   width: 100%;
+   padding: 12px;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   margin-top: 6px;
+   margin-bottom: 16px;
+   resize: vertical;
+ }
+
+ .formlienhe input[type=email],
+ select,
+ textarea {
+   width: 100%;
+   padding: 12px;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   margin-top: 6px;
+   margin-bottom: 16px;
+   resize: vertical;
+ }
+
+ input[type=submit] {
+   background-color: #00a65a;
+   color: white;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   float: right;
+ }
+
+ input[type=submit]:hover {
+   background-color: #fc0;
+
+ }
+
+ .formlienhe {
+   border-radius: 5px;
+
+
+ }
+
+ .lienhe_form {
+   width: 600px;
+   height: 700px;
+   background-color: white;
+
+   margin-left: 340px;
+ }
+
+ .cuoi {
+   width: auto;
+   height: 500px;
+   background-color: pink;
+ }
+
+ .diachicuthe_phai_pre {
+   width: 400px;
+   color: black;
+
+   margin-top: 50px;
+
+ }
